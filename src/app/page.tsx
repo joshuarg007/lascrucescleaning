@@ -19,17 +19,11 @@ export default function Home() {
         lede="Recurring cleaning from $160 a visit. Deep cleans and move-outs quoted the same way, before anyone comes to the house."
       />
 
-      <Section title="Why the prices are published">
+      <Section title="What cleaning costs in Las Cruces">
         <p>
-          Call five cleaning companies in Las Cruces and you will hear the same
-          thing five times: it depends. It does depend, on square footage and on
-          how long it has been. That is not a reason to keep the number secret
-          until someone has given up an afternoon for a walkthrough.
-        </p>
-        <p>
-          So here is what the work starts at. The final number moves with the
-          size and the condition of the house, and we tell you before we start,
-          not after we finish.
+          Here is what the work starts at. The final number depends on the size
+          and the condition of the house, and you get that number before we
+          start, not after we finish.
         </p>
         <div className="not-prose mt-6 overflow-x-auto rounded border border-line bg-surface">
           <table className="w-full text-left text-sm">
@@ -72,15 +66,14 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Who does the work">
+      <Section title="The same cleaners at every visit">
         <p>
-          Two people, both owners. Nobody is subcontracted and nobody is sent to
-          your house who does not have their name on the business. That is the
-          whole reason the schedule caps out at about fifteen recurring clients.
+          Your house is cleaned by the same people each time, so you tell us once
+          how you want it done. No crews rotating through and no work handed off
+          to a subcontractor.
         </p>
         <p>
-          We work {site.hours.toLowerCase()}, in {site.areaServed}. We do not
-          currently serve El Paso.
+          We work {site.hours.toLowerCase()}, in {site.areaServed}.
         </p>
         <p className="text-sm">
           <Link href="/about/" className="font-semibold text-accent">

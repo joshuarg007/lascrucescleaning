@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Cleaning Services in Las Cruces, New Mexico",
   description:
-    "A cleaning company that works Las Cruces and only Las Cruces. Where we go, what we charge, and why we do not drive to El Paso.",
+    "A cleaning company that works Las Cruces and only Las Cruces. Where we go and what we charge.",
   alternates: { canonical: "/las-cruces-nm/" },
 };
 
@@ -16,7 +16,7 @@ export default function LasCruces() {
       <Hero
         eyebrow="Service Area"
         title="We clean Las Cruces, and only Las Cruces."
-        lede="One city, short drives, and a schedule that holds. That is a deliberate choice rather than a limitation we are apologizing for."
+        lede="One city, short drives, and a schedule that holds."
       />
 
       <Section title="Where we work">
@@ -31,9 +31,9 @@ export default function LasCruces() {
       <Section title="Why not El Paso">
         <p>
           El Paso is forty five miles away, which is close to two hours of
-          driving for a three hour job. Somebody has to pay for that, and it
-          would be you. Cleaning is a route business before it is anything else,
-          so we stay where the drives are ten minutes and the price reflects it.
+          driving for a three hour job, and that time would end up on your
+          invoice. Staying in Las Cruces keeps the drives short, the arrival
+          times reliable and the price where it is.
         </p>
       </Section>
 

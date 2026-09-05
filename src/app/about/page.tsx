@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Las Cruces Cleaning",
   description:
-    "Two owners who do the cleaning themselves, in Las Cruces, with published prices and a capped schedule.",
+    "A Las Cruces cleaning company with published prices, the same cleaners at every visit, and a straight answer on the phone.",
   alternates: { canonical: "/about/" },
 };
 
@@ -14,45 +14,43 @@ export default function About() {
     <>
       <Hero
         eyebrow="About"
-        title="Two people, both owners, doing the work."
-        lede="No crews, no subcontractors, and no chance of a stranger arriving at your house who has never been told how you like it done."
+        title="Cleaning done properly, by the same people every time."
+        lede="You tell us once how you want your house handled, and it is handled that way at every visit."
       />
 
       <Section title="How we work">
         <p>
-          The schedule caps at roughly fifteen recurring clients. That number is
-          not modesty, it is arithmetic: two people can properly clean about
-          thirty hours a week, and a biweekly house takes around three and a half
-          hours once travel is counted. Past fifteen we would have to hire, and
-          then you would be getting somebody else.
+          Every job is scheduled with enough time to finish it properly, so we
+          take a limited number of recurring clients rather than packing the
+          calendar and running late. If we cannot fit you in on the day you want,
+          we will say so on the phone instead of promising a window we cannot
+          keep.
         </p>
         <p>
-          So the honest position is that we will be full at some point, and when
-          we are, we will say so instead of stretching the schedule and arriving
-          late to everyone.
+          You get the same cleaners each visit, working from your instructions.
+          Nothing is subcontracted.
         </p>
       </Section>
 
-      <Section title="Why the prices are on the site">
+      <Section title="Prices you can see before you call">
         <p>
-          We looked at every cleaning company advertising in Las Cruces and El
-          Paso before starting this one. Not a single one publishes a price.
-          Meanwhile the thing people actually search for is what it costs.
+          Our rates are published on the pricing page. You can see what a
+          recurring clean, a deep clean and a move-out cost before you speak to
+          anyone, and the quote you get on the phone comes from those same
+          numbers.
         </p>
         <p>
-          Keeping the number back is a sales tactic. It works, which is why
-          everybody does it. It also wastes an afternoon of your time before you
-          find out we are too expensive or not expensive enough. We would rather
-          publish the range and talk to people who are fine with it.
+          The final price depends on the size and the condition of the house. We
+          give you that figure up front, and it does not change after the work is
+          done.
         </p>
       </Section>
 
-      <Section title="Where we stand">
+      <Section title="Registered and local">
         <p>
           Las Cruces Cleaning is registered for gross receipts tax with the State
           of New Mexico and registered as a business with the City of Las Cruces.
-          We are a new company and we are not going to pretend otherwise, which
-          is also why there is no wall of five star reviews on this page yet.
+          We work {site.areaServed} and nowhere else.
         </p>
       </Section>
 
