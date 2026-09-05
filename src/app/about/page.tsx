@@ -52,9 +52,23 @@ export default function About() {
 
       <Section title="Registered and local">
         <p>
-          Las Cruces Cleaning is registered for gross receipts tax with the State
-          of New Mexico and registered as a business with the City of Las Cruces.
-          We work {site.areaServed} and nowhere else.
+          Las Cruces Cleaning is registered for gross receipts tax with the{" "}
+          <a
+            href="https://www.tax.newmexico.gov/"
+            className="font-medium text-accent underline"
+            rel="noopener"
+          >
+            New Mexico Taxation and Revenue Department
+          </a>{" "}
+          and registered as a business with the{" "}
+          <a
+            href="https://www.lascruces.gov/"
+            className="font-medium text-accent underline"
+            rel="noopener"
+          >
+            City of Las Cruces
+          </a>
+          . We work {site.areaServed} and nowhere else.
         </p>
       </Section>
 
