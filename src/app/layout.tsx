@@ -41,7 +41,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const org = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "HouseCleaningBusiness"],
+    "@type": ["LocalBusiness", "HouseCleaningBusiness", "Organization"],
     "@id": `${site.url}#business`,
     name: site.name,
     url: site.url,

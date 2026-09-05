@@ -5,7 +5,7 @@ import { prices, services, site } from "@/lib/site";
 import { cardImage, image } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "House Cleaning in Las Cruces, NM | Las Cruces Cleaning",
+  title: { absolute: "House Cleaning in Las Cruces, NM: Prices From $160" },
   description:
     "House cleaning, deep cleaning and move-out cleaning in Las Cruces, New Mexico. Prices published up front, starting at $160 a visit. Call (575) 386-5714.",
   alternates: { canonical: "/" },
@@ -105,7 +105,7 @@ export default function Home() {
           to a subcontractor.
         </p>
         <p>
-          We work {site.hours}, in {site.areaServed}.
+          We work {site.hours}, across {site.areaServed}.
         </p>
         <p className="text-sm">
           <Link href="/about/" className="font-semibold text-accent">
@@ -131,6 +131,14 @@ export default function Home() {
           If something is not right, call the same day or the next morning and we
           come back and fix it at no charge. That is a cheaper outcome for us
           than losing a recurring client over a bathroom.
+        </p>
+        <p>
+          Nobody is asked to sign a long agreement to get a reasonable rate. A
+          recurring slot costs less per visit because the work is genuinely
+          smaller when a property was last done two weeks ago, not because
+          somebody committed to a term. Cancel, pause over a holiday, or move to
+          a different interval, and the only thing we ask for is enough notice to
+          give the slot to somebody else.
         </p>
       </Section>
 
