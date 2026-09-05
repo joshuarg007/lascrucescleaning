@@ -181,9 +181,9 @@ export default function RootLayout({
                 target="_blank"
                 rel="noopener"
                 aria-label="Website built by Axion Deep Digital"
-                className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-[#131318] px-2.5 py-1.5 opacity-80 transition-opacity hover:opacity-100"
+                className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-[#131318] px-2.5 py-1.5 text-white/85 opacity-90 transition-opacity hover:opacity-100"
               >
-                <span className="text-[11px] font-medium text-white/80">
+                <span className="text-[11px] font-medium text-white/85">
                   Built by
                 </span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -53,7 +53,7 @@ export default function Home() {
       <Section title="What cleaning costs in Las Cruces">
         <p>
           Here is what the work starts at. The final number depends on the size
-          and the condition of the house, and you get that number before we
+          and the condition of the property, and you get that number before we
           start, not after we finish.
         </p>
         <div className="not-prose mt-6 overflow-x-auto rounded border border-line bg-surface">
@@ -100,7 +100,7 @@ export default function Home() {
 
       <Section title="The same cleaners at every visit">
         <p>
-          Your house is cleaned by the same people each time, so you tell us once
+          Your home is cleaned by the same people each time, so you tell us once
           how you want it done. No crews rotating through and no work handed off
           to a subcontractor.
         </p>
@@ -116,13 +116,13 @@ export default function Home() {
 
       <Section title="What it is like to work with us">
         <p>
-          You call, you describe the house, and you get a price on that call. No
+          You call, you describe the place, and you get a price on that call. No
           appointment to receive a number, no walkthrough before anyone will talk
           about money, and no sales visit dressed up as an estimate.
         </p>
         <p>
           If the price works, we agree a date. Recurring clients hand over a key
-          or a code and come home to a finished house, which is how most of this
+          or a code and come home to a finished place, which is how most of this
           work is done once the first visit has gone well. Payment happens after
           the work rather than before it, and we do not take deposits or ask for
           card details over the phone.
@@ -144,20 +144,20 @@ export default function Home() {
 
       <Section title="Cleaning in a desert town">
         <p>
-          Las Cruces is harder on a house than most places, in two specific ways
+          Las Cruces is harder on a home than most places, in two specific ways
           that show up in every job here.
         </p>
         <p>
           The first is dust. The valley moves a great deal of fine sand, and any
-          house with windows that open collects it on sills, blinds and
-          baseboards faster than a house in a wetter climate would. That is the
+          home with windows that open collects it on sills, blinds and
+          baseboards faster than one in a wetter climate would. That is the
           honest reason cleaning every two weeks holds up here where monthly
           might be enough elsewhere.
         </p>
         <p>
           The second is the water. It is hard, and it leaves mineral scale on
           glass, chrome and tile that builds quietly until somebody scrubs it
-          off. A recurring visit keeps ahead of it. A house that has gone a year
+          off. A recurring visit keeps ahead of it. A place that has gone a year
           usually needs a deep clean to get back to level, and sometimes what is
           left underneath is etching rather than dirt, in which case we will tell
           you that instead of charging you to keep scrubbing it.
@@ -168,7 +168,7 @@ export default function Home() {
         <Faq items={faq} />
       </Section>
 
-      <CallToAction line="Tell us the house and we will give you a number on the phone." />
+      <CallToAction line="Tell us about the place and we will give you a number on the phone." />
     </>
   );
 }
