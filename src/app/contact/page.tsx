@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero, Section } from "@/components/ui";
+import QuoteForm from "@/components/QuoteForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -26,6 +27,16 @@ export default function Contact() {
         </p>
         <p>{site.hours}. Texts are fine and often faster.</p>
         <p>Serving {site.areaServed}.</p>
+      </Section>
+
+      <Section title="Or send it in writing">
+        <p>
+          Fill this in and we will call you back with a number. It goes straight
+          to us, not to a call centre.
+        </p>
+        <div className="not-prose">
+          <QuoteForm />
+        </div>
       </Section>
 
       <Section title="What we will ask you">

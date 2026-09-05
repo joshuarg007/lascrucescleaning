@@ -28,6 +28,7 @@ const nav = [
   { href: "/commercial-cleaning/", label: "Commercial" },
   { href: "/pricing/", label: "Pricing" },
   { href: "/about/", label: "About" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 export default function RootLayout({
@@ -92,7 +93,7 @@ export default function RootLayout({
               </a>
             </p>
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
-              {[...nav, { href: "/contact/", label: "Contact" }].map((n) => (
+              {nav.map((n) => (
                 <li key={n.href}>
                   <Link href={n.href} className="hover:text-accent">
                     {n.label}
