@@ -13,3 +13,15 @@ customHeaders:
         value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
       - key: 'Content-Security-Policy'
         value: "default-src 'self'; script-src 'self' 'unsafe-inline' https://api.site2crm.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.site2crm.io; form-action 'self' https://api.site2crm.io; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+  - pattern: '/'
+    headers:
+      - key: 'Content-Type'
+        value: 'text/html; charset=UTF-8'
+  - pattern: '/*/'
+    headers:
+      - key: 'Content-Type'
+        value: 'text/html; charset=UTF-8'
+  - pattern: '**/*.html'
+    headers:
+      - key: 'Content-Type'
+        value: 'text/html; charset=UTF-8'

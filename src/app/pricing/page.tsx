@@ -113,6 +113,53 @@ export default function Pricing() {
         </p>
       </Section>
 
+      <Section title="Recurring against one-time, in numbers">
+        <p>
+          A one-time standard clean costs $180 and a recurring visit costs $160.
+          People sometimes read that as a small discount for loyalty. It is not.
+          A house cleaned two weeks ago is genuinely less work than a house
+          cleaned whenever it was last done, so the recurring rate reflects a
+          smaller job rather than a favour.
+        </p>
+        <p>
+          Over a year, biweekly visits at $160 come to twenty six cleans. Monthly
+          visits cost more per visit and add up to twelve, and the house sits
+          further from level for most of that time. Which of those is right for
+          you depends on the house and who is in it, and we would rather say so
+          than push everyone onto the most frequent schedule available.
+        </p>
+      </Section>
+
+      <Section title="Why there is no per-square-foot rate">
+        <p>
+          Cleaning does not scale evenly with floor area. Kitchens and bathrooms
+          carry most of the labour in any house, and a 2,600 square foot house
+          with two bathrooms can be less work than an 1,800 square foot house
+          with three and a half. A rate per square foot would quietly overcharge
+          the first and undercharge the second.
+        </p>
+        <p>
+          So we price the job. Give us the size, the bathroom count and the
+          condition on the phone, and the number you hear is the number you pay
+          as long as the house matches the description.
+        </p>
+      </Section>
+
+      <Section title="What is not on the invoice">
+        <p>
+          No trip charge, because we only work inside Las Cruces and Mesilla and
+          that driving is already in the price. No supplies or equipment fee,
+          because we bring our own. No deposit, and no card details taken over
+          the phone to hold a booking.
+        </p>
+        <p>
+          New Mexico gross receipts tax applies to services, so it appears on
+          your invoice as its own line at the Las Cruces rate. It is a real cost
+          rather than a fee we invented, and showing it separately is more honest
+          than folding it into the headline number.
+        </p>
+      </Section>
+
       <CallToAction line={`Call ${site.phone} and we will price your house on the call.`} />
     </>
   );

@@ -41,15 +41,70 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const org = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "HouseCleaningBusiness"],
+    "@id": `${site.url}#business`,
     name: site.name,
     url: site.url,
     telephone: "+1-575-386-5714",
+    priceRange: "$$",
+    currenciesAccepted: "USD",
     ...(og ? { image: `${site.url}${og}` } : {}),
-    areaServed: {
-      "@type": "City",
-      name: "Las Cruces",
-      containedInPlace: { "@type": "State", name: "New Mexico" },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Las Cruces",
+      addressRegion: "NM",
+      addressCountry: "US",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Las Cruces",
+        containedInPlace: { "@type": "State", name: "New Mexico" },
+      },
+      {
+        "@type": "City",
+        name: "Mesilla",
+        containedInPlace: { "@type": "State", name: "New Mexico" },
+      },
+    ],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: "08:00",
+        closes: "18:00",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Cleaning services",
+      itemListElement: [
+        ["House Cleaning", 160, "/house-cleaning/"],
+        ["Deep Cleaning", 320, "/deep-cleaning/"],
+        ["Move-Out Cleaning", 350, "/move-out-cleaning/"],
+        ["Commercial Cleaning", null, "/commercial-cleaning/"],
+      ].map(([name, price, path]) => ({
+        "@type": "Offer",
+        url: `${site.url}${path}`,
+        itemOffered: { "@type": "Service", name },
+        ...(price
+          ? {
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                price,
+                priceCurrency: "USD",
+                valueAddedTaxIncluded: false,
+              },
+            }
+          : {}),
+      })),
     },
   };
 
@@ -116,7 +171,7 @@ export default function RootLayout({
           </div>
 
           <div className="border-t border-line">
-            <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+            <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-5 text-xs text-ink-2 sm:flex-row sm:items-center sm:justify-between">
               <span>
                 &copy; {new Date().getFullYear()} {site.name}. Serving{" "}
                 {site.areaServed}.
@@ -128,7 +183,7 @@ export default function RootLayout({
                 aria-label="Website built by Axion Deep Digital"
                 className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-[#131318] px-2.5 py-1.5 opacity-80 transition-opacity hover:opacity-100"
               >
-                <span className="text-[11px] font-medium text-white/60">
+                <span className="text-[11px] font-medium text-white/80">
                   Built by
                 </span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}

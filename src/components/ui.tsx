@@ -141,6 +141,33 @@ export function CallToAction({ line }: { line: string }) {
   );
 }
 
+export type QA = { q: string; a: string };
+
+export function Faq({ items }: { items: QA[] }) {
+  return (
+    <div className="not-prose divide-y divide-line border-y border-line">
+      {items.map((it) => (
+        <div key={it.q} className="py-5">
+          <h3 className="font-semibold text-ink">{it.q}</h3>
+          <p className="mt-2 text-ink-2">{it.a}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function faqSchema(items: QA[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((it) => ({
+      "@type": "Question",
+      name: it.q,
+      acceptedAnswer: { "@type": "Answer", text: it.a },
+    })),
+  };
+}
+
 export function serviceSchema(name: string, description: string) {
   return {
     "@context": "https://schema.org",
