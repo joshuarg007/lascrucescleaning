@@ -27,7 +27,7 @@ export default function QuoteForm() {
       <div id="s2c-form" />
       <noscript>
         <p className="text-ink-2">
-          The quote form needs JavaScript. Call (575) 200-4717 instead and we
+          The quote form needs JavaScript. Call (575) 386-5714 instead and we
           will price the job on the phone.
         </p>
       </noscript>

@@ -7,7 +7,7 @@ import { cardImage, image } from "@/lib/images";
 export const metadata: Metadata = {
   title: "House Cleaning in Las Cruces, NM | Las Cruces Cleaning",
   description:
-    "House cleaning, deep cleaning and move-out cleaning in Las Cruces, New Mexico. Prices published up front, starting at $160 a visit. Call (575) 200-4717.",
+    "House cleaning, deep cleaning and move-out cleaning in Las Cruces, New Mexico. Prices published up front, starting at $160 a visit. Call (575) 386-5714.",
   alternates: { canonical: "/" },
 };
 

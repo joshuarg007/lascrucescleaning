@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Las Cruces Cleaning",
   description:
-    "Call or text (575) 200-4717 for a cleaning quote in Las Cruces. Monday through Saturday, 8am to 6pm.",
+    "Call or text (575) 386-5714 for a cleaning quote in Las Cruces. Monday through Saturday, 8am to 6pm.",
   alternates: { canonical: "/contact/" },
 };
 

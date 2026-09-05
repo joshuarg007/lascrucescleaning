@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Las Cruces Cleaning",
   },
   description:
-    "House cleaning, deep cleaning and move-out cleaning in Las Cruces, New Mexico. Prices published up front. Call (575) 200-4717.",
+    "House cleaning, deep cleaning and move-out cleaning in Las Cruces, New Mexico. Prices published up front. Call (575) 386-5714.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -43,7 +43,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: site.name,
     url: site.url,
-    telephone: "+1-575-200-4717",
+    telephone: "+1-575-386-5714",
     areaServed: {
       "@type": "City",
       name: "Las Cruces",
