@@ -26,47 +26,47 @@ const card = (file: string, alt: string): SiteImage => ({
 
 export const images = {
   homeHero: banner(
-    "las-cruces-house-cleaning-hero.jpg",
-    "Sunlit living room in a Las Cruces home after a clean",
+    "las-cruces-house-cleaning-hero.webp",
+    "Sunlit southwestern living room with a jute rug, kiva fireplace and desert mountains through the window",
   ),
   houseCleaning: banner(
-    "house-cleaning-las-cruces.jpg",
-    "Tidy kitchen counters and clean floors in a Las Cruces house",
+    "house-cleaning-las-cruces.webp",
+    "Clean kitchen with empty countertops, a stainless sink and the Organ Mountains through the window",
   ),
   deepCleaning: banner(
-    "deep-cleaning-las-cruces.jpg",
-    "Bathroom tile and fixtures cleaned back to the surface",
+    "deep-cleaning-las-cruces.webp",
+    "Spotless bathroom with a white tile counter, folded towels and a clear glass shower",
   ),
   moveOutCleaning: banner(
-    "move-out-cleaning-las-cruces.jpg",
-    "Empty room with clean floors and bare windows ready for a walkthrough",
+    "move-out-cleaning-las-cruces.webp",
+    "Empty room with swept wood floors and bare walls, sunlight falling across the floor",
   ),
   commercialCleaning: banner(
-    "commercial-cleaning-las-cruces.jpg",
-    "Small office cleaned after hours in Las Cruces",
+    "commercial-cleaning-las-cruces.webp",
+    "Small office with clean desks, dark screens and freshly vacuumed carpet at dusk",
   ),
   about: banner(
-    "las-cruces-cleaning-supplies.jpg",
-    "Cleaning cloths, brushes and spray bottles set out on a counter",
+    "las-cruces-cleaning-supplies.webp",
+    "Amber spray bottles, folded microfiber cloths, a wooden brush and a bowl of baking soda on a stone counter",
   ),
   pricing: banner(
-    "las-cruces-cleaning-pricing.jpg",
-    "Clean, uncluttered room in warm afternoon light",
+    "las-cruces-cleaning-pricing.webp",
+    "Simple dining room with a bare wooden table in warm afternoon light",
   ),
   houseCleaningCard: card(
-    "house-cleaning-las-cruces-card.jpg",
+    "house-cleaning-las-cruces-card.webp",
     "House cleaning in Las Cruces",
   ),
   deepCleaningCard: card(
-    "deep-cleaning-las-cruces-card.jpg",
+    "deep-cleaning-las-cruces-card.webp",
     "Deep cleaning in Las Cruces",
   ),
   moveOutCleaningCard: card(
-    "move-out-cleaning-las-cruces-card.jpg",
+    "move-out-cleaning-las-cruces-card.webp",
     "Move-out cleaning in Las Cruces",
   ),
   commercialCleaningCard: card(
-    "commercial-cleaning-las-cruces-card.jpg",
+    "commercial-cleaning-las-cruces-card.webp",
     "Commercial cleaning in Las Cruces",
   ),
 } as const;
