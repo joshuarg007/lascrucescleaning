@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const FORM_KEY = "486728db2a343685f6d3";
+const FORM_KEY = "1c3371b80d0322eeda98";
 const WIDGET_SRC = "https://api.site2crm.io/api/public/forms/widget.js";
 
 export default function QuoteForm() {
