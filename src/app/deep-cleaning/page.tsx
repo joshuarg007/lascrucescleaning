@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "Deep cleaning in Las Cruces from $320. Baseboards, inside appliances, grout and vents, the build-up a standard clean does not reach.",
   alternates: { canonical: "/deep-cleaning/" },
+  openGraph: { url: "/deep-cleaning/" },
 };
 
 export default function DeepCleaning() {

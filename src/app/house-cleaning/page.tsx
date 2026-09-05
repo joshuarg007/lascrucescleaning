@@ -4,10 +4,11 @@ import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "House Cleaning in Las Cruces, NM",
+  title: "Recurring House Cleaning in Las Cruces, NM",
   description:
     "Recurring and one-time house cleaning in Las Cruces. From $160 a visit every two weeks, with the same cleaners at every visit.",
   alternates: { canonical: "/house-cleaning/" },
+  openGraph: { url: "/house-cleaning/" },
 };
 
 export default function HouseCleaning() {

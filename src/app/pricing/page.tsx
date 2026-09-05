@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "What house cleaning costs in Las Cruces. Recurring from $160 a visit, deep clean from $320, move-out from $350, with the things that move the price explained.",
   alternates: { canonical: "/pricing/" },
+  openGraph: { url: "/pricing/" },
 };
 
 const faq = {

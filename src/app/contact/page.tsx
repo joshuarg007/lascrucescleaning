@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "Call or text (575) 386-5714 for a cleaning quote in Las Cruces. Monday through Saturday, 8am to 6pm.",
   alternates: { canonical: "/contact/" },
+  openGraph: { url: "/contact/" },
 };
 
 export default function Contact() {

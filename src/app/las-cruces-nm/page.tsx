@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "A cleaning company that works Las Cruces and only Las Cruces. Where we go and what we charge.",
   alternates: { canonical: "/las-cruces-nm/" },
+  openGraph: { url: "/las-cruces-nm/" },
 };
 
 export default function LasCruces() {

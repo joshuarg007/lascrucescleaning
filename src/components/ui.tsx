@@ -57,6 +57,8 @@ export function Banner({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={image.src}
+        srcSet={`${image.src.replace(".webp", "-800.webp")} 800w, ${image.src} 1600w`}
+        sizes="(max-width: 800px) 100vw, 1600px"
         alt={image.alt}
         width={image.width}
         height={image.height}

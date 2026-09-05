@@ -31,6 +31,7 @@ const nav = [
   { href: "/move-out-cleaning/", label: "Move-Out" },
   { href: "/commercial-cleaning/", label: "Commercial" },
   { href: "/pricing/", label: "Pricing" },
+  { href: "/las-cruces-nm/", label: "Service Area" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
 ];
@@ -44,6 +45,7 @@ export default function RootLayout({
     name: site.name,
     url: site.url,
     telephone: "+1-575-386-5714",
+    ...(og ? { image: `${site.url}${og}` } : {}),
     areaServed: {
       "@type": "City",
       name: "Las Cruces",

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "Move-out and move-in cleaning in Las Cruces from $350. Empty houses cleaned for the landlord walkthrough or the new owner.",
   alternates: { canonical: "/move-out-cleaning/" },
+  openGraph: { url: "/move-out-cleaning/" },
 };
 
 export default function MoveOutCleaning() {

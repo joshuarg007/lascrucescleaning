@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     "A Las Cruces cleaning company with published prices, the same cleaners at every visit, and a straight answer on the phone.",
   alternates: { canonical: "/about/" },
+  openGraph: { url: "/about/" },
 };
 
 export default function About() {
