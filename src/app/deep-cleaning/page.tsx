@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner } from "@/components/ui";
 import { site } from "@/lib/site";
+import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Deep Cleaning in Las Cruces, NM",
@@ -23,6 +24,8 @@ export default function DeepCleaning() {
         title="The reset clean, from $320."
         lede="For a house that has gone a while, or one that has never been cleaned professionally. It is the visit that makes the recurring rate possible."
       />
+
+      <Banner image={image("deepCleaning")} priority />
 
       <Section title="What a deep clean adds">
         <p>

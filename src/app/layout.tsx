@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { ogImage } from "@/lib/images";
 import "./globals.css";
+
+const og = ogImage();
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -17,6 +20,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     locale: "en_US",
     url: site.url,
+    ...(og ? { images: [{ url: og, width: 1200, height: 630 }] } : {}),
   },
   robots: { index: true, follow: true },
 };

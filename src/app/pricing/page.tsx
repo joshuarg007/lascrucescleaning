@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction, Schema } from "@/components/ui";
+import { Hero, Section, CallToAction, Schema, Banner } from "@/components/ui";
 import { prices, site } from "@/lib/site";
+import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "House Cleaning Prices in Las Cruces",
@@ -50,6 +51,8 @@ export default function Pricing() {
         lede="Starting prices for every service we offer, and an honest account of what moves them."
         showPricesLink={false}
       />
+
+      <Banner image={image("pricing")} priority />
 
       <Section>
         <div className="not-prose space-y-4">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction } from "@/components/ui";
+import { Hero, Section, CallToAction, Banner } from "@/components/ui";
 import { site } from "@/lib/site";
+import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About Las Cruces Cleaning",
@@ -17,6 +18,8 @@ export default function About() {
         title="Cleaning done properly, by the same people every time."
         lede="You tell us once how you want your house handled, and it is handled that way at every visit."
       />
+
+      <Banner image={image("about")} priority />
 
       <Section title="How we work">
         <p>

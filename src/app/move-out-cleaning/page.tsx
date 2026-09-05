@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner } from "@/components/ui";
 import { site } from "@/lib/site";
+import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Move-Out Cleaning in Las Cruces, NM",
@@ -23,6 +24,8 @@ export default function MoveOutCleaning() {
         title="Empty house, cleaned for the walkthrough. From $350."
         lede="Booked around your move date, done after the last box is out, finished before the inspection."
       />
+
+      <Banner image={image("moveOutCleaning")} priority />
 
       <Section title="What gets cleaned">
         <Included

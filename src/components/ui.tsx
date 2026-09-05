@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
+import type { SiteImage } from "@/lib/images";
 
 export function Hero({
   eyebrow,
@@ -40,6 +41,47 @@ export function Hero({
         </div>
       </div>
     </section>
+  );
+}
+
+export function Banner({
+  image,
+  priority = false,
+}: {
+  image: SiteImage | null;
+  priority?: boolean;
+}) {
+  if (!image) return null;
+  return (
+    <div className="border-b border-line bg-surface">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={image.src}
+        alt={image.alt}
+        width={image.width}
+        height={image.height}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding="async"
+        className="h-52 w-full object-cover sm:h-72 lg:h-96"
+      />
+    </div>
+  );
+}
+
+export function Thumb({ image }: { image: SiteImage | null }) {
+  if (!image) return null;
+  return (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src={image.src}
+      alt={image.alt}
+      width={image.width}
+      height={image.height}
+      loading="lazy"
+      decoding="async"
+      className="mb-4 h-36 w-full rounded object-cover"
+    />
   );
 }
 

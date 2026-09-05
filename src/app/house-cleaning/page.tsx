@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner } from "@/components/ui";
 import { site } from "@/lib/site";
+import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "House Cleaning in Las Cruces, NM",
   description:
-    "Recurring and one-time house cleaning in Las Cruces. From $160 a visit every two weeks. Same two people every time.",
+    "Recurring and one-time house cleaning in Las Cruces. From $160 a visit every two weeks, with the same cleaners at every visit.",
   alternates: { canonical: "/house-cleaning/" },
 };
 
@@ -23,6 +24,8 @@ export default function HouseCleaning() {
         title="Regular house cleaning, from $160 a visit."
         lede="Every two weeks is what most houses want. Weekly and monthly work too, and the rate moves with the interval."
       />
+
+      <Banner image={image("houseCleaning")} priority />
 
       <Section title="What is included every visit">
         <Included

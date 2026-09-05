@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction } from "@/components/ui";
+import { Hero, Section, CallToAction, Banner, Thumb } from "@/components/ui";
 import { prices, services, site } from "@/lib/site";
+import { cardImage, image } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "House Cleaning in Las Cruces, NM | Las Cruces Cleaning",
@@ -18,6 +19,8 @@ export default function Home() {
         title="House cleaning in Las Cruces, with the price on the page."
         lede="Recurring cleaning from $160 a visit. Deep cleans and move-outs quoted the same way, before anyone comes to the house."
       />
+
+      <Banner image={image("homeHero")} priority />
 
       <Section title="What cleaning costs in Las Cruces">
         <p>
@@ -59,6 +62,7 @@ export default function Home() {
               href={`/${s.slug}/`}
               className="rounded border border-line bg-surface p-5 hover:border-accent"
             >
+              <Thumb image={cardImage(s.slug)} />
               <p className="font-semibold text-ink">{s.title}</p>
               <p className="mt-1 text-sm text-muted">{s.blurb}</p>
             </Link>
