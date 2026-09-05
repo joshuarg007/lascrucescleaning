@@ -114,6 +114,36 @@ export default function RootLayout({
               ))}
             </ul>
           </div>
+
+          <div className="border-t border-line">
+            <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-5 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+              <span>
+                &copy; {new Date().getFullYear()} {site.name}. Serving{" "}
+                {site.areaServed}.
+              </span>
+              <a
+                href="https://axiondeepdigital.com/?utm_source=lascrucescleaning&utm_medium=footer_badge&utm_campaign=built_by"
+                target="_blank"
+                rel="noopener"
+                aria-label="Website built by Axion Deep Digital"
+                className="inline-flex w-fit items-center gap-2 rounded-lg border border-white/10 bg-[#131318] px-2.5 py-1.5 opacity-80 transition-opacity hover:opacity-100"
+              >
+                <span className="text-[11px] font-medium text-white/60">
+                  Built by
+                </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/axiondeepdigital-badge.webp"
+                  alt="Axion Deep Digital"
+                  width={68}
+                  height={20}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-5 w-auto"
+                />
+              </a>
+            </div>
+          </div>
         </footer>
       </body>
     </html>
