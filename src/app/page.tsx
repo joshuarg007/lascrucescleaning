@@ -77,7 +77,7 @@ export default function Home() {
           to a subcontractor.
         </p>
         <p>
-          We work {site.hours.toLowerCase()}, in {site.areaServed}.
+          We work {site.hours}, in {site.areaServed}.
         </p>
         <p className="text-sm">
           <Link href="/about/" className="font-semibold text-accent">
