@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import { site } from "@/lib/site";
 import { ogImage } from "@/lib/images";
@@ -214,6 +215,18 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+
+        {/*
+          Site2CRM AI chat, this site's own widget key. Loaded lazily because a
+          chat bubble should never sit ahead of LCP on the critical path. The
+          Amplify CSP allowlists api.site2crm.io for script-src, connect-src and
+          frame-src, which this needs.
+        */}
+        <Script
+          src="https://api.site2crm.io/api/public/chat-widget/widget.js"
+          data-widget-key="wgt_t7RqWBxfDa0Ncksow-VOWg"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
