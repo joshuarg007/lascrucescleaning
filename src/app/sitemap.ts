@@ -13,6 +13,7 @@ const routes = [
   "/las-cruces-nm",
   "/about",
   "/contact",
+  "/privacy",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

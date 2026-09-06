@@ -14,27 +14,27 @@ export const metadata: Metadata = {
 const faq: QA[] = [
   {
     q: "Will this get my deposit back?",
-    a: "It removes the cleaning grounds a landlord can withhold against, which is the part we control. It does not repair damage, patch nail holes or repaint, and no cleaner can promise a deposit outcome, because that decision belongs to the landlord. What we can say is that the house will be clean enough that cleaning is not the reason.",
+    a: "We can't guarantee what a landlord will return, because we don't control damage charges, lease terms, or the final inspection. What we can do is clean the property to the agreed scope so ordinary cleaning issues are not left behind.",
   },
   {
     q: "Does the house need to be completely empty?",
-    a: "As close to empty as you can manage. The value of a move-out clean is that nothing is covered, so a room with boxes still stacked in it is a room we cannot finish. If a few items have to stay, put them together in one room and tell us which one.",
+    a: "As close to empty as you can manage. The value of this clean is that nothing is covered, so a room with boxes still stacked in it is a room we can't finish. If a few items have to stay, put them in one room and tell us which one.",
   },
   {
     q: "How far ahead should I book?",
-    a: "As soon as you know your date, and a week ahead at minimum. Move-out cleans cluster at the end of the month because leases do, so the last three days of any month fill first. Tell us the walkthrough date rather than the move date, since that is the deadline that actually matters.",
+    a: "As soon as you know your date, and a week ahead at minimum. Move-out cleans cluster at the end of the month because leases do, so the last few days of any month fill first. Tell us the walkthrough date rather than the move date.",
   },
   {
     q: "Do you clean carpets?",
-    a: "We vacuum thoroughly. We do not steam clean or shampoo carpet, which is a different trade with different equipment. If your lease requires professional carpet cleaning with a receipt, book that separately and let us handle everything else.",
+    a: "We vacuum thoroughly. We don't steam clean or shampoo carpet, which needs different equipment. If your lease requires professional carpet cleaning with a receipt, book that separately and let us handle everything else.",
   },
   {
     q: "Can you clean the garage?",
-    a: "A sweep and a wipe down of surfaces, yes, if the garage is empty. Oil stains on concrete and paint overspray are not cleaning problems. Ask when you call and we will tell you what is realistic for your garage rather than guessing on a web page.",
+    a: "A sweep and a wipe down of surfaces, yes, if the garage is empty. Oil stains and paint overspray usually need specialty treatment beyond a standard garage clean. Ask when you call and we'll tell you what's realistic for yours.",
   },
   {
     q: "Is move-in cleaning the same thing?",
-    a: "The same work in the same empty house at the same price. Plenty of people book it because they would rather take possession of a house somebody has already cleaned than trust that the last occupant did.",
+    a: "The same work in the same empty home at the same price. Plenty of people book it rather than trust that the last occupant cleaned on the way out.",
   },
 ];
 
@@ -79,39 +79,35 @@ export default function MoveOutCleaning() {
           the value of this clean is that nothing is covered.
         </p>
         <p>
-          Moving in rather than out is the same work in the same empty house, and
-          the same price. Most people would rather take possession of a house
-          somebody else has already cleaned.
+          Moving in is the same work in the same empty home, at the same price.
         </p>
       </Section>
 
       <Section title="What it costs">
         <p>
-          A move-out clean starts at $350 for a house of roughly 1,400 to 1,600
-          square feet. It is priced above a deep clean of the same house because
-          an empty house means every cabinet, every closet floor and every corner
-          is in scope, with nothing standing in front of it.
+          A move-out clean starts at $350 for a home of roughly 1,400 to 1,600
+          square feet. It&apos;s priced above a deep clean of the same home
+          because an empty property puts every cabinet, closet floor and corner
+          in scope, with nothing standing in front of it. Oven and refrigerator
+          interiors are included.
         </p>
         <p>
-          Size and bathroom count move the number, and so does whether the house
-          was maintained. A rental that has been cleaned regularly for three
-          years and a rental that has not are the same square footage and a
-          different day of work.
+          Size and bathroom count move your quote, and so does whether the
+          property was maintained.
         </p>
       </Section>
 
-      <Section title="What a landlord actually checks">
+      <Section title="The areas most often missed before a walkthrough">
         <p>
-          Walkthroughs are more predictable than people expect. The oven, the
-          refrigerator, the inside of kitchen cabinets, the bathroom grout and
-          hardware, the baseboards, and the floors in the corners where furniture
-          used to be. Those are the places a deposit gets withheld over, and
-          those are the places an empty house makes reachable.
+          The oven, the refrigerator, the inside of kitchen cabinets, the
+          bathroom grout and hardware, the baseboards, and the floor in the
+          corners where furniture used to sit. An empty home makes all of them
+          reachable.
         </p>
         <p>
-          Blinds, window tracks and light fixtures are the ones people forget
-          entirely, because they are invisible until a house is empty and the
-          light comes through differently. They are in the scope of this clean.
+          Blinds, window tracks and light fixtures get forgotten most often,
+          because they&apos;re invisible until a home is empty and the light comes
+          through differently. All three are in the scope of this clean.
         </p>
       </Section>
 

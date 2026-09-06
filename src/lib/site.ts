@@ -6,8 +6,10 @@ export const site = {
   phoneHref: "tel:+15753865714",
   city: "Las Cruces",
   region: "NM",
-  areaServed: "Las Cruces, New Mexico",
-  hours: "Monday through Saturday, 8am to 6pm",
+  areaServed: "Las Cruces, Mesilla and nearby areas",
+  areaServedShort: "Las Cruces and Mesilla",
+  hours: "Monday through Saturday, 8 a.m. to 6 p.m.",
+  smsHref: "sms:+15753865714",
 };
 
 export type Price = {
@@ -23,28 +25,28 @@ export const prices: Price[] = [
     from: 160,
     unit: "per visit",
     detail:
-      "Kitchen, bathrooms, floors, dusting and surfaces throughout. The rate holds as long as the schedule does.",
+      "Kitchen, bathrooms, floors, dusting and surfaces throughout. Oven and refrigerator interiors are optional add-ons.",
   },
   {
     service: "One-time standard clean",
     from: 180,
     unit: "one time",
     detail:
-      "The same work as a recurring visit, booked once. It costs more per visit because there is no second visit keeping the house from drifting.",
+      "The same work as a recurring visit, booked once. It costs more per visit because there is no next visit keeping the home from drifting.",
   },
   {
     service: "First-time deep clean",
     from: 320,
     unit: "one time",
     detail:
-      "Baseboards, inside appliances, grout, vents and the build-up a standard clean does not reach. Most recurring clients start here.",
+      "Baseboards, grout, vents and the build-up a standard clean cannot reach. Oven and refrigerator interiors are included.",
   },
   {
     service: "Move-out clean",
     from: 350,
     unit: "one time",
     detail:
-      "An empty house cleaned to hand back to a landlord or a buyer. Inside cabinets, inside the oven and refrigerator, every fixture.",
+      "An empty home cleaned to hand back to a landlord or a buyer. Inside cabinets, inside the oven and refrigerator, every fixture.",
   },
 ];
 

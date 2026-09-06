@@ -36,6 +36,8 @@ const nav = [
   { href: "/contact/", label: "Contact" },
 ];
 
+const legalNav = [{ href: "/privacy/", label: "Privacy" }];
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -137,12 +139,20 @@ export default function RootLayout({
                 ))}
               </ul>
             </nav>
-            <a
-              href={site.phoneHref}
-              className="order-2 rounded bg-accent px-4 py-2 text-sm font-semibold text-white sm:order-3"
-            >
-              {site.phone}
-            </a>
+            <div className="order-2 flex items-center gap-2 sm:order-3">
+              <a
+                href={site.phoneHref}
+                className="rounded bg-accent px-4 py-2 text-sm font-semibold text-white"
+              >
+                {site.phone}
+              </a>
+              <a
+                href={site.smsHref}
+                className="rounded border border-line px-3 py-2 text-sm font-semibold text-ink"
+              >
+                Text
+              </a>
+            </div>
           </div>
         </header>
 
@@ -158,9 +168,13 @@ export default function RootLayout({
               <a href={site.phoneHref} className="text-accent font-medium">
                 {site.phone}
               </a>
+              <span aria-hidden> &middot; </span>
+              <a href={site.smsHref} className="text-accent font-medium">
+                Text us
+              </a>
             </p>
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
-              {nav.map((n) => (
+              {[...nav, ...legalNav].map((n) => (
                 <li key={n.href}>
                   <Link href={n.href} className="hover:text-accent">
                     {n.label}

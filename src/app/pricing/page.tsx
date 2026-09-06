@@ -20,7 +20,7 @@ const faq = {
       name: "How much does house cleaning cost in Las Cruces?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Recurring cleaning starts at $160 a visit for a typical three bedroom house. A one-time standard clean starts at $180, a first-time deep clean at $320, and a move-out clean at $350. Square footage and condition move the final number.",
+        text: "Recurring cleaning starts at $160 a visit for a home of roughly 1,400 to 1,600 square feet with three bedrooms and two bathrooms. A one-time standard clean starts at $180, a first-time deep clean at $320, and a move-out clean at $350. Square footage, bathroom count and condition move your quote.",
       },
     },
     {
@@ -28,7 +28,7 @@ const faq = {
       name: "Why is the first clean more expensive?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The first visit to a house that has not been cleaned professionally takes longer, because it includes the build-up that recurring visits keep from returning. After that first clean the recurring rate applies.",
+        text: "The first visit to a home that has not been cleaned professionally takes longer, because it includes build-up that recurring visits then keep from returning. After that first clean the recurring rate applies.",
       },
     },
     {
@@ -36,7 +36,7 @@ const faq = {
       name: "Do you charge by the hour or by the job?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "By the job. You get the number before the work starts, so a slow day is our problem rather than yours.",
+        text: "By the job. You get your quote before the cleaning starts, so a slow day is our problem, not yours.",
       },
     },
   ],
@@ -49,13 +49,19 @@ export default function Pricing() {
       <Hero
         eyebrow="Pricing"
         title="What cleaning costs in Las Cruces."
-        lede="Starting prices for every service we offer, and an honest account of what moves them."
+        lede="Starting prices for every service we offer, and what moves them."
         showPricesLink={false}
       />
 
       <Banner image={image("pricing")} priority />
 
       <Section>
+        <p className="mb-6 max-w-2xl text-lg text-ink-2">
+          These starting prices assume a home of roughly 1,400 to 1,600 square
+          feet with three bedrooms and two bathrooms. Your quote may change with
+          the number of bathrooms, the home&apos;s condition, and any optional
+          work you request.
+        </p>
         <div className="not-prose space-y-4">
           {prices.map((p) => (
             <div
@@ -92,71 +98,70 @@ export default function Pricing() {
           clean and then drop to the recurring rate.
         </p>
         <p>
-          <strong>Whether anyone is living in it.</strong> An empty house is
-          faster to clean and slower to finish, because everything is visible and
-          nothing gets skipped.
-        </p>
-        <p>
-          <strong>Add-ons.</strong> Inside the refrigerator, inside the oven,
-          interior windows and laundry are quoted on top rather than folded into
-          a headline price that then has to be walked back.
+          <strong>Whether anyone is living in it.</strong> An empty home has
+          nothing standing in front of anything, so every cabinet, closet floor
+          and corner is in scope.
         </p>
       </Section>
 
-      <Section title="What we do not do">
+      <Section title="Add-ons, and what is already included">
         <p>
-          We do not clean up after pets beyond ordinary hair and tracked dirt, we
-          do not handle biohazard or hoarding situations, and we do not move
-          furniture heavier than a dining chair. If that is the job you have, you
-          want a specialist and we will say so on the phone rather than after we
-          arrive.
+          For recurring and one-time standard cleaning, oven interiors,
+          refrigerator interiors, full interior windows and laundry are optional
+          add-ons, quoted on top.
+        </p>
+        <p>
+          Oven and refrigerator interiors are already included in our deep-clean
+          and move-out scopes. You don&apos;t need to add them to those jobs.
         </p>
       </Section>
 
-      <Section title="Recurring against one-time, in numbers">
+      <Section title="What we don&apos;t do">
         <p>
-          A one-time standard clean costs $180 and a recurring visit costs $160.
-          People sometimes read that as a small discount for loyalty. It is not.
-          A house cleaned two weeks ago is genuinely less work than a house
-          cleaned whenever it was last done, so the recurring rate reflects a
-          smaller job rather than a favour.
+          We don&apos;t clean up after pets beyond ordinary hair and tracked
+          dirt, and we don&apos;t handle biohazard or hoarding situations. If
+          that&apos;s the job you have, you want a specialist, and we&apos;ll say
+          so on the phone rather than after we arrive.
         </p>
         <p>
-          Over a year, biweekly visits at $160 come to twenty six cleans. Monthly
-          visits cost more per visit and add up to twelve, and the house sits
-          further from level for most of that time. Which of those is right for
-          you depends on the house and who is in it, and we would rather say so
-          than push everyone onto the most frequent schedule available.
+          On furniture, we move smaller items that two people can shift safely
+          without tools. We don&apos;t move loaded, oversized, fragile or
+          connected items.
+        </p>
+      </Section>
+
+      <Section title="Recurring costs less per visit">
+        <p>
+          A one-time standard clean is $180 and a recurring visit is $160.
+          That&apos;s not a loyalty discount. A home cleaned two weeks ago is
+          genuinely less work than one cleaned whenever it was last done, so the
+          recurring rate reflects a smaller job.
         </p>
       </Section>
 
       <Section title="Why there is no per-square-foot rate">
         <p>
-          Cleaning does not scale evenly with floor area. Kitchens and bathrooms
-          carry most of the labour in any house, and a 2,600 square foot house
-          with two bathrooms can be less work than an 1,800 square foot house
-          with three and a half. A rate per square foot would quietly overcharge
-          the first and undercharge the second.
+          Cleaning doesn&apos;t scale evenly with floor area. Kitchens and
+          bathrooms carry most of the labor, so a 2,600-square-foot home with two
+          bathrooms can be less work than a 1,800-square-foot home with three and
+          a half. A rate per square foot would overcharge the first and
+          undercharge the second.
         </p>
         <p>
           So we price the job. Give us the size, the bathroom count and the
-          condition on the phone, and the number you hear is the number you pay
-          as long as the house matches the description.
+          condition, and your quote is fixed as long as the property matches what
+          you described.
         </p>
       </Section>
 
       <Section title="What is not on the invoice">
         <p>
-          No trip charge, because we only work inside Las Cruces and Mesilla and
-          that driving is already in the price. No supplies or equipment fee,
-          because we bring our own. No deposit, and no card details taken over
-          the phone to hold a booking.
+          No trip charge, no supplies or equipment fee, no deposit, and no card
+          details taken over the phone to hold a booking.
         </p>
         <p>
-          New Mexico gross receipts tax applies to services, so it appears on
-          your invoice as its own line at the Las Cruces rate. It is a real cost
-          rather than a fee we invented, and showing it separately is more honest
-          than folding it into the headline number.
+          Applicable New Mexico gross receipts tax is shown separately on the
+          invoice.
         </p>
       </Section>
 

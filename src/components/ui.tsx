@@ -7,11 +7,13 @@ export function Hero({
   title,
   lede,
   showPricesLink = true,
+  secondary,
 }: {
   eyebrow: string;
   title: string;
   lede: string;
   showPricesLink?: boolean;
+  secondary?: { href: string; label: string };
 }) {
   return (
     <section className="border-b border-line bg-surface">
@@ -30,7 +32,20 @@ export function Hero({
           >
             Call {site.phone}
           </a>
-          {showPricesLink ? (
+          <a
+            href={site.smsHref}
+            className="rounded border border-line px-5 py-3 font-semibold"
+          >
+            Text us
+          </a>
+          {secondary ? (
+            <Link
+              href={secondary.href}
+              className="rounded border border-line px-5 py-3 font-semibold"
+            >
+              {secondary.label}
+            </Link>
+          ) : showPricesLink ? (
             <Link
               href="/pricing/"
               className="rounded border border-line px-5 py-3 font-semibold"

@@ -14,27 +14,23 @@ export const metadata: Metadata = {
 const faq: QA[] = [
   {
     q: "How much does house cleaning cost in Las Cruces?",
-    a: "Recurring cleaning here starts at $160 a visit, a one-time standard clean at $180, a first deep clean at $320 and a move-out clean at $350. Those are our published starting prices for a house of roughly 1,400 to 1,600 square feet. Most companies in this market quote only after a walkthrough, which is why the figure is hard to find.",
+    a: "Recurring cleaning starts at $160 a visit, a one-time standard clean at $180, a first deep clean at $320 and a move-out clean at $350. Those starting prices assume a home of roughly 1,400 to 1,600 square feet with three bedrooms and two bathrooms.",
   },
   {
     q: "Why do you publish prices when nobody else does?",
-    a: "Because it is the first thing people want to know and the last thing they are told. Withholding the number is a sales tactic that works, and it also wastes an afternoon of your time before either side finds out whether the budget matches. We would rather publish the range and talk to people it suits.",
+    a: "Because it is the first thing people want to know, and finding it usually takes a phone call and a walkthrough. Publishing our starting prices means you can decide whether we are in your range before you spend an afternoon on it.",
   },
   {
     q: "What areas do you serve?",
-    a: "Las Cruces and Mesilla, plus the immediate outskirts. We do not serve El Paso. Staying in one city keeps the drives short, which keeps arrival times reliable and keeps the price where it is.",
-  },
-  {
-    q: "Are you insured?",
-    a: "Not yet. General liability cover is quoted and ready to bind, and it is bound the day the first job is scheduled rather than carried while there is nothing to cover. We would rather tell you that plainly than let you assume otherwise.",
+    a: "Las Cruces, Mesilla and nearby addresses. We don't serve El Paso. Keeping the area close means short drives, reliable arrival times and no trip charge.",
   },
   {
     q: "Do you bring supplies?",
-    a: "Yes, everything comes with us. If you want a particular product used on a particular surface, leave it out and we will use it instead.",
+    a: "Yes, everything comes with us. If you want a particular product used on a particular surface, leave it out and we'll use that instead.",
   },
   {
     q: "How do I get a quote?",
-    a: "Call or text (575) 386-5714 with the square footage, the number of bathrooms and roughly when it was last cleaned. That is enough to price a house on the phone in about three minutes. No walkthrough, no appointment to get a number.",
+    a: "Call or text (575) 386-5714 with the square footage, the number of bathrooms and roughly when it was last cleaned. That's enough to quote a home in about three minutes. No walkthrough, no appointment to get a price.",
   },
 ];
 
@@ -45,16 +41,16 @@ export default function Home() {
       <Hero
         eyebrow="Las Cruces, New Mexico"
         title="House cleaning in Las Cruces, with the price on the page."
-        lede="Recurring cleaning from $160 a visit. Deep cleans and move-outs quoted the same way, before anyone comes to the house."
+        lede="Recurring cleaning starts at $160 a visit. Tell us the size of the home, the number of bathrooms, and when it was last cleaned, and we'll quote the job before you book."
       />
 
       <Banner image={image("homeHero")} priority />
 
       <Section title="What cleaning costs in Las Cruces">
         <p>
-          Here is what the work starts at. The final number depends on the size
-          and the condition of the property, and you get that number before we
-          start, not after we finish.
+          These are starting prices for a home of roughly 1,400 to 1,600 square
+          feet with three bedrooms and two bathrooms. Your quote moves with size,
+          bathroom count and condition, and you get it before we start.
         </p>
         <div className="not-prose mt-6 overflow-x-auto rounded border border-line bg-surface">
           <table className="w-full text-left text-sm">
@@ -114,53 +110,45 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section title="What it is like to work with us">
+      <Section title="How it works">
+        <ol className="list-decimal space-y-3 pl-5 text-lg">
+          <li>Tell us about the home: size, bathrooms, and when it was last cleaned.</li>
+          <li>
+            Get a fixed quote before you book. It holds as long as the property
+            matches what you described, and if it doesn&apos;t we call you before
+            starting.
+          </li>
+          <li>
+            The same two owners clean it each visit, and you pay afterward. No
+            deposit, and no card details over the phone.
+          </li>
+        </ol>
         <p>
-          You call, you describe the place, and you get a price on that call. No
-          appointment to receive a number, no walkthrough before anyone will talk
-          about money, and no sales visit dressed up as an estimate.
+          Recurring service can be arranged with a key, a code or a garage
+          remote, so you come home to a finished house. If we miss something,
+          tell us that day or the following morning and we&apos;ll come back and
+          put it right at no charge.
         </p>
         <p>
-          If the price works, we agree a date. Recurring clients hand over a key
-          or a code and come home to a finished place, which is how most of this
-          work is done once the first visit has gone well. Payment happens after
-          the work rather than before it, and we do not take deposits or ask for
-          card details over the phone.
-        </p>
-        <p>
-          If something is not right, call the same day or the next morning and we
-          come back and fix it at no charge. That is a cheaper outcome for us
-          than losing a recurring client over a bathroom.
-        </p>
-        <p>
-          Nobody is asked to sign a long agreement to get a reasonable rate. A
-          recurring slot costs less per visit because the work is genuinely
-          smaller when a property was last done two weeks ago, not because
-          somebody committed to a term. Cancel, pause over a holiday, or move to
-          a different interval, and the only thing we ask for is enough notice to
-          give the slot to somebody else.
+          There&apos;s no long agreement to sign. A recurring slot costs less per
+          visit because a home cleaned two weeks ago is genuinely less work.
+          Cancel, pause over a holiday, or change the interval whenever you need
+          to, with enough notice for us to fill the slot.
         </p>
       </Section>
 
       <Section title="Cleaning in a desert town">
         <p>
-          Las Cruces is harder on a home than most places, in two specific ways
-          that show up in every job here.
+          Two local conditions shape almost every job here. The valley moves a
+          lot of fine dust, which settles on sills, blinds and baseboards faster
+          than it would in a wetter climate. And the water is hard, so mineral
+          scale builds on glass, chrome and tile.
         </p>
         <p>
-          The first is dust. The valley moves a great deal of fine sand, and any
-          home with windows that open collects it on sills, blinds and
-          baseboards faster than one in a wetter climate would. That is the
-          honest reason cleaning every two weeks holds up here where monthly
-          might be enough elsewhere.
-        </p>
-        <p>
-          The second is the water. It is hard, and it leaves mineral scale on
-          glass, chrome and tile that builds quietly until somebody scrubs it
-          off. A recurring visit keeps ahead of it. A place that has gone a year
-          usually needs a deep clean to get back to level, and sometimes what is
-          left underneath is etching rather than dirt, in which case we will tell
-          you that instead of charging you to keep scrubbing it.
+          Both are why every other week holds up here where monthly might be
+          enough elsewhere. Where scale has been sitting for years it can etch
+          the surface underneath, and we&apos;ll tell you when what&apos;s left is
+          damage instead of charging you to keep scrubbing it.
         </p>
       </Section>
 
@@ -168,7 +156,7 @@ export default function Home() {
         <Faq items={faq} />
       </Section>
 
-      <CallToAction line="Tell us about the place and we will give you a number on the phone." />
+      <CallToAction line="Tell us about the home and we\u2019ll quote it on the phone." />
     </>
   );
 }
