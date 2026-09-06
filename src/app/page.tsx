@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction, Banner, Thumb, Faq, faqSchema, Schema, type QA } from "@/components/ui";
+import { Hero, Section, CallToAction, Banner, Thumb, Faq, faqSchema, Schema, Included, type QA } from "@/components/ui";
 import { prices, services, site } from "@/lib/site";
 import { cardImage, image } from "@/lib/images";
 
@@ -134,6 +134,28 @@ export default function Home() {
           visit because a home cleaned two weeks ago is genuinely less work.
           Cancel, pause over a holiday, or change the interval whenever you need
           to, with enough notice for us to fill the slot.
+        </p>
+      </Section>
+
+      <Section title="What a standard visit includes">
+        <p>
+          The same list every time, so you know what you&apos;re paying for:
+        </p>
+        <Included
+          items={[
+            "Kitchen counters, sink, stovetop and appliance exteriors",
+            "Bathrooms: toilets, tubs, showers, mirrors and hardware",
+            "Floors vacuumed and mopped throughout",
+            "Dusting of reachable surfaces, shelves and sills",
+            "Beds made with the linens already on them",
+            "Trash out and surfaces tidied",
+            "Interior glass on doors where there are handprints",
+          ]}
+        />
+        <p>
+          Oven interiors, refrigerator interiors, full interior windows and
+          laundry are optional add-ons on a standard visit. They&apos;re already
+          included in a deep clean and a move-out clean.
         </p>
       </Section>
 
