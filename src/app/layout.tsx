@@ -50,6 +50,7 @@ export default function RootLayout({
     url: site.url,
     telephone: "+1-575-386-5714",
     email: site.email,
+    logo: `${site.url}/las-cruces-cleaning-logo.webp`,
     priceRange: "$$",
     currenciesAccepted: "USD",
     ...(og ? { image: `${site.url}${og}` } : {}),
@@ -127,8 +128,15 @@ export default function RootLayout({
         />
         <header className="border-b border-line bg-surface">
           <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-4">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
-              Las Cruces Cleaning
+            <Link href="/" className="shrink-0">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/las-cruces-cleaning-logo.webp"
+                alt={site.name}
+                width={90}
+                height={48}
+                className="h-12 w-auto"
+              />
             </Link>
             <nav className="order-3 w-full sm:order-2 sm:w-auto">
               <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-2">
