@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Las Cruces Cleaning",
   description:
-    "Call or text (575) 386-5714 for a cleaning quote in Las Cruces or Mesilla. Monday through Saturday, 8 a.m. to 6 p.m.",
+    "Call or text (575) 386-5714 or email info@lascrucescleaning.com for a cleaning quote in Las Cruces or Mesilla. Monday through Saturday, 8 a.m. to 6 p.m.",
   alternates: { canonical: "/contact/" },
   openGraph: { url: "/contact/" },
 };
@@ -57,6 +57,12 @@ export default function Contact() {
           </a>
         </p>
         <p>{site.hours}. Texts are fine and often faster.</p>
+        <p>
+          Prefer email?{" "}
+          <a href={site.emailHref} className="text-accent font-medium">
+            {site.email}
+          </a>
+        </p>
         <p>Serving {site.areaServed}.</p>
       </Section>
 

@@ -10,6 +10,8 @@ export const site = {
   areaServedShort: "Las Cruces and Mesilla",
   hours: "Monday through Saturday, 8 a.m. to 6 p.m.",
   smsHref: "sms:+15753865714",
+  email: "info@lascrucescleaning.com",
+  emailHref: "mailto:info@lascrucescleaning.com",
 };
 
 export type Price = {

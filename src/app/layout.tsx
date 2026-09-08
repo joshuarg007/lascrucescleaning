@@ -49,6 +49,7 @@ export default function RootLayout({
     name: site.name,
     url: site.url,
     telephone: "+1-575-386-5714",
+    email: site.email,
     priceRange: "$$",
     currenciesAccepted: "USD",
     ...(og ? { image: `${site.url}${og}` } : {}),
@@ -172,6 +173,10 @@ export default function RootLayout({
               <span aria-hidden> &middot; </span>
               <a href={site.smsHref} className="text-accent font-medium">
                 Text us
+              </a>
+              <span aria-hidden> &middot; </span>
+              <a href={site.emailHref} className="text-accent font-medium">
+                {site.email}
               </a>
             </p>
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
