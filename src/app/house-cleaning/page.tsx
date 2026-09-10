@@ -26,7 +26,7 @@ const faq: QA[] = [
   },
   {
     q: "What does not get done in a standard visit?",
-    a: "Inside the oven and refrigerator, full interior windows, and laundry are optional add-ons rather than part of a standard visit. Dishes left in the sink and anything needing a ladder taller than a two-step are out of scope entirely.",
+    a: "Inside the oven and refrigerator and full interior windows are optional add-ons rather than part of a standard visit. Dishes left in the sink and anything needing a ladder taller than a two-step are out of scope entirely.",
   },
   {
     q: "What should I do before you arrive?",

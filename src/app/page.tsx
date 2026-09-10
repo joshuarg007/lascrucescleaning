@@ -153,9 +153,9 @@ export default function Home() {
           ]}
         />
         <p>
-          Oven interiors, refrigerator interiors, full interior windows and
-          laundry are optional add-ons on a standard visit. They&apos;re already
-          included in a deep clean and a move-out clean.
+          Oven interiors, refrigerator interiors and full interior windows are
+          optional add-ons on a standard visit. They&apos;re already included in a
+          deep clean and a move-out clean.
         </p>
       </Section>
 

@@ -65,7 +65,7 @@ export default function MoveOutCleaning() {
             "Every floor, corner to corner, with nothing in the way",
             "Baseboards, door frames, switch plates and vents",
             "Interior windows, sills and tracks",
-            "Closets, shelving and laundry hookups",
+            "Closets and shelving",
             "Light fixtures and ceiling fans",
           ]}
         />

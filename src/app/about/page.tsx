@@ -118,9 +118,8 @@ export default function About() {
         <p>
           We don&apos;t steam clean or shampoo carpet, which needs different
           equipment and is a separate trade. We don&apos;t clean exterior windows
-          above the ground floor. We don&apos;t do laundry, dishes left in the
-          sink, or anything that requires moving an appliance connected to the
-          wall.
+          above the ground floor. We don&apos;t do dishes left in the sink, or
+          anything that requires moving an appliance connected to the wall.
         </p>
         <p>
           We also don&apos;t repair, patch or paint. A move-out clean handles the

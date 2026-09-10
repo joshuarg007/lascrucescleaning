@@ -107,8 +107,8 @@ export default function Pricing() {
       <Section title="Add-ons, and what is already included">
         <p>
           For recurring and one-time standard cleaning, oven interiors,
-          refrigerator interiors, full interior windows and laundry are optional
-          add-ons, quoted on top.
+          refrigerator interiors and full interior windows are optional add-ons,
+          quoted on top.
         </p>
         <p>
           Oven and refrigerator interiors are already included in our deep-clean
