@@ -1,6 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction, Banner, Thumb, Faq, faqSchema, Schema, Included, type QA } from "@/components/ui";
+import {
+  Hero,
+  Section,
+  CallToAction,
+  Thumb,
+  Faq,
+  faqSchema,
+  Schema,
+  Included,
+  PriceCards,
+  Steps,
+  TrustStrip,
+  type QA,
+} from "@/components/ui";
 import { prices, services, site } from "@/lib/site";
 import { cardImage, image } from "@/lib/images";
 
@@ -42,87 +55,93 @@ export default function Home() {
         eyebrow="Las Cruces, New Mexico"
         title="House cleaning in Las Cruces, with the price on the page."
         lede="Recurring cleaning starts at $160 a visit. Tell us the size of the home, the number of bathrooms, and when it was last cleaned, and we'll quote the job before you book."
+        image={image("homeHero")}
       />
 
-      <Banner image={image("homeHero")} priority />
+      <TrustStrip
+        items={[
+          {
+            label: "Prices on the page",
+            detail: "Starting numbers published, before you call anyone.",
+          },
+          {
+            label: "The same two cleaners",
+            detail: "Owner operated. No rotating crews, no subcontractors.",
+          },
+          {
+            label: "Quoted in three minutes",
+            detail: "Over the phone. No walkthrough, no appointment.",
+          },
+          {
+            label: "Nothing to sign",
+            detail: "Pause, cancel or change the interval whenever.",
+          },
+        ]}
+      />
 
-      <Section title="What cleaning costs in Las Cruces">
+      <Section
+        tone="surface"
+        eyebrow="Pricing"
+        title="What cleaning costs in Las Cruces"
+      >
         <p>
           These are starting prices for a home of roughly 1,400 to 1,600 square
           feet with three bedrooms and two bathrooms. Your quote moves with size,
           bathroom count and condition, and you get it before we start.
         </p>
-        <div className="not-prose mt-6 overflow-x-auto rounded border border-line bg-surface">
-          <table className="w-full text-left text-sm">
-            <tbody>
-              {prices.map((p) => (
-                <tr key={p.service} className="border-b border-line last:border-0">
-                  <td className="px-4 py-3 font-medium text-ink">
-                    {p.service}
-                  </td>
-                  <td className="whitespace-nowrap px-4 py-3 text-right font-semibold text-ink">
-                    from ${p.from}{" "}
-                    <span className="font-normal text-muted">
-                      {p.unit}
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div className="not-prose pt-2">
+          <PriceCards prices={prices} highlight="Recurring clean, every two weeks" />
         </div>
         <p className="text-sm">
-          <Link href="/pricing/" className="font-semibold text-accent">
+          <Link href="/pricing/" className="font-semibold text-accent underline-offset-4 hover:underline">
             What moves the price, and what is included
           </Link>
         </p>
       </Section>
 
-      <Section title="What we clean">
-        <div className="not-prose grid gap-4 sm:grid-cols-2">
+      <Section tone="ground" eyebrow="Services" title="What we clean">
+        <div className="not-prose grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((s) => (
             <Link
               key={s.slug}
               href={`/${s.slug}/`}
-              className="rounded border border-line bg-surface p-5 hover:border-accent"
+              className="group flex flex-col overflow-hidden rounded-xl border border-line bg-surface transition-shadow hover:shadow-lg hover:shadow-ink/5"
             >
               <Thumb image={cardImage(s.slug)} />
-              <p className="font-semibold text-ink">{s.title}</p>
-              <p className="mt-1 text-sm text-muted">{s.blurb}</p>
+              <div className="flex flex-1 flex-col p-5">
+                <p className="font-semibold text-ink">{s.title}</p>
+                <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted">
+                  {s.blurb}
+                </p>
+                <span className="mt-4 text-sm font-semibold text-accent">
+                  See what is included
+                  <span aria-hidden className="ml-1 inline-block transition-transform group-hover:translate-x-1">
+                    &rarr;
+                  </span>
+                </span>
+              </div>
             </Link>
           ))}
         </div>
       </Section>
 
-      <Section title="The same cleaners at every visit">
-        <p>
-          Your home is cleaned by the same people each time, so you tell us once
-          how you want it done. No crews rotating through and no work handed off
-          to a subcontractor.
-        </p>
-        <p>
-          We work {site.hours}, across {site.areaServed}.
-        </p>
-        <p className="text-sm">
-          <Link href="/about/" className="font-semibold text-accent">
-            More about how we work
-          </Link>
-        </p>
-      </Section>
-
-      <Section title="How it works">
-        <ol className="list-decimal space-y-3 pl-5 text-lg">
-          <li>Tell us about the home: size, bathrooms, and when it was last cleaned.</li>
-          <li>
-            Get a fixed quote before you book. It holds as long as the property
-            matches what you described, and if it doesn&apos;t we call you before
-            starting.
-          </li>
-          <li>
-            The same two owners clean it each visit, and you pay afterward. No
-            deposit, and no card details over the phone.
-          </li>
-        </ol>
+      <Section tone="sand" eyebrow="How it works" title="Three steps, and none of them is a sales visit">
+        <Steps
+          steps={[
+            {
+              title: "Tell us about the home",
+              body: "Size, bathrooms, and roughly when it was last cleaned. That is enough to price it.",
+            },
+            {
+              title: "Get a fixed quote",
+              body: "It holds as long as the property matches what you described. If it does not, we call you before starting.",
+            },
+            {
+              title: "We clean, you pay after",
+              body: "No deposit and no card details over the phone. The same two owners every visit.",
+            },
+          ]}
+        />
         <p>
           Recurring service can be arranged with a key, a code or a garage
           remote, so you come home to a finished house. If we miss something,
@@ -137,7 +156,28 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section title="What a standard visit includes">
+      <Section
+        tone="surface"
+        eyebrow="Who shows up"
+        title="The same cleaners at every visit"
+        media={image("about")}
+      >
+        <p>
+          Your home is cleaned by the same people each time, so you tell us once
+          how you want it done. No crews rotating through and no work handed off
+          to a subcontractor.
+        </p>
+        <p>
+          We work {site.hours}, across {site.areaServed}.
+        </p>
+        <p className="text-sm">
+          <Link href="/about/" className="font-semibold text-accent underline-offset-4 hover:underline">
+            More about how we work
+          </Link>
+        </p>
+      </Section>
+
+      <Section tone="ground" eyebrow="Scope" title="What a standard visit includes">
         <p>
           The same list every time, so you know what you&apos;re paying for:
         </p>
@@ -159,7 +199,12 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section title="Cleaning in a desert town">
+      <Section
+        tone="dark"
+        eyebrow="Local conditions"
+        title="Cleaning in a desert town"
+        media={image("houseCleaning")}
+      >
         <p>
           Two local conditions shape almost every job here. The valley moves a
           lot of fine dust, which settles on sills, blinds and baseboards faster
@@ -174,11 +219,11 @@ export default function Home() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="surface" eyebrow="FAQ" title="Common questions">
         <Faq items={faq} />
       </Section>
 
-      <CallToAction line="Tell us about the home and we\u2019ll quote it on the phone." />
+      <CallToAction line="Tell us about the home and we’ll quote it on the phone." />
     </>
   );
 }

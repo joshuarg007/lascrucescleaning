@@ -9,6 +9,7 @@ import {
   Schema,
   type QA,
 } from "@/components/ui";
+import { image } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -50,9 +51,10 @@ export default function LasCruces() {
         eyebrow="Service Area"
         title="House cleaning across Las Cruces and Mesilla."
         lede="We keep the service area close so we can spend the day cleaning instead of driving across southern New Mexico."
+        image={image("homeHero")}
       />
 
-      <Section title="Where we work">
+      <Section tone="ground" title="Where we work">
         <p>
           Anywhere inside Las Cruces, plus Mesilla and nearby addresses. That
           covers the east mesa, the university area, Sonoma Ranch, Telshor,
@@ -65,7 +67,7 @@ export default function LasCruces() {
         </p>
       </Section>
 
-      <Section title="Why we keep it close">
+      <Section tone="ground" title="Why we keep it close">
         <p>
           El Paso is forty five miles away, which is close to two hours of
           driving for a three hour job. That time ends up on somebody&apos;s
@@ -79,7 +81,7 @@ export default function LasCruces() {
         </p>
       </Section>
 
-      <Section title="What homes here need">
+      <Section tone="sand" title="What homes here need">
         <p>
           Two local conditions shape almost every job. The valley moves a lot of
           fine dust, which settles on sills, blinds and baseboards faster than it
@@ -93,7 +95,7 @@ export default function LasCruces() {
         </p>
       </Section>
 
-      <Section title="What it costs here">
+      <Section tone="surface" title="What it costs here">
         <p>
           Recurring cleaning starts at $160 a visit, a deep clean at $320 and a
           move-out at $350, for a home of roughly 1,400 to 1,600 square feet.
@@ -105,7 +107,7 @@ export default function LasCruces() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
 

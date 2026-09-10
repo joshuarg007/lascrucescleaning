@@ -23,7 +23,7 @@ export default function QuoteForm() {
   }, []);
 
   return (
-    <div className="rounded border border-line bg-surface p-5">
+    <div className="max-w-3xl rounded-xl border border-line bg-surface p-5 shadow-sm shadow-ink/5 sm:p-7">
       <div id="s2c-form" />
       <noscript>
         <p className="text-ink-2">

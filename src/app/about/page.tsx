@@ -3,7 +3,6 @@ import {
   Hero,
   Section,
   CallToAction,
-  Banner,
   Faq,
   faqSchema,
   Schema,
@@ -51,11 +50,10 @@ export default function About() {
         eyebrow="About"
         title="Owner-operated, with the same two people every visit."
         lede="Las Cruces Cleaning is run by two local owners who do the cleaning themselves."
+        image={image("about")}
       />
 
-      <Banner image={image("about")} priority />
-
-      <Section title="Who comes into your home">
+      <Section tone="surface" title="Who comes into your home">
         <p>
           The same two people, every time. We don&apos;t run a rotating crew and
           we don&apos;t subcontract your home to someone you have never met. You
@@ -69,7 +67,7 @@ export default function About() {
         </p>
       </Section>
 
-      <Section title="Pricing and scheduling">
+      <Section tone="ground" title="Pricing and scheduling">
         <p>
           Our starting prices are published on the pricing page, so you can see
           what a recurring clean, a deep clean and a move-out cost before you
@@ -88,7 +86,7 @@ export default function About() {
         </p>
       </Section>
 
-      <Section title="Registration and insurance">
+      <Section tone="sand" title="Registration and insurance">
         <p>
           Las Cruces Cleaning is registered for gross receipts tax with the{" "}
           <a
@@ -114,7 +112,7 @@ export default function About() {
         </p>
       </Section>
 
-      <Section title="What we don&apos;t do">
+      <Section tone="surface" title="What we don&apos;t do">
         <p>
           We don&apos;t steam clean or shampoo carpet, which needs different
           equipment and is a separate trade. We don&apos;t clean exterior windows
@@ -127,7 +125,7 @@ export default function About() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction, Schema, Banner } from "@/components/ui";
+import { Hero, Section, CallToAction, PriceCards, Schema } from "@/components/ui";
 import { prices, site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -51,41 +51,22 @@ export default function Pricing() {
         title="What cleaning costs in Las Cruces."
         lede="Starting prices for every service we offer, and what moves them."
         showPricesLink={false}
+        image={image("pricing")}
       />
 
-      <Banner image={image("pricing")} priority />
-
-      <Section>
+      <Section tone="surface">
         <p className="mb-6 max-w-2xl text-lg text-ink-2">
           These starting prices assume a home of roughly 1,400 to 1,600 square
           feet with three bedrooms and two bathrooms. Your quote may change with
           the number of bathrooms, the home&apos;s condition, and any optional
           work you request.
         </p>
-        <div className="not-prose space-y-4">
-          {prices.map((p) => (
-            <div
-              key={p.service}
-              className="rounded border border-line bg-surface p-5"
-            >
-              <div className="flex flex-wrap items-baseline justify-between gap-3">
-                <h2 className="text-lg font-semibold text-ink">
-                  {p.service}
-                </h2>
-                <p className="text-xl font-bold text-accent">
-                  from ${p.from}{" "}
-                  <span className="text-sm font-normal text-muted">
-                    {p.unit}
-                  </span>
-                </p>
-              </div>
-              <p className="mt-2 text-ink-2">{p.detail}</p>
-            </div>
-          ))}
+        <div className="not-prose pt-2">
+          <PriceCards prices={prices} highlight="Recurring clean, every two weeks" />
         </div>
       </Section>
 
-      <Section title="What moves the number">
+      <Section tone="ground" title="What moves the number">
         <p>
           <strong>Square footage.</strong> The starting prices assume roughly
           1,400 to 1,600 square feet, three bedrooms and two bathrooms. A larger
@@ -104,7 +85,7 @@ export default function Pricing() {
         </p>
       </Section>
 
-      <Section title="Add-ons, and what is already included">
+      <Section tone="sand" title="Add-ons, and what is already included">
         <p>
           For recurring and one-time standard cleaning, oven interiors,
           refrigerator interiors and full interior windows are optional add-ons,
@@ -116,7 +97,7 @@ export default function Pricing() {
         </p>
       </Section>
 
-      <Section title="What we don&apos;t do">
+      <Section tone="surface" title="What we don&apos;t do">
         <p>
           We don&apos;t clean up after pets beyond ordinary hair and tracked
           dirt, and we don&apos;t handle biohazard or hoarding situations. If
@@ -130,7 +111,7 @@ export default function Pricing() {
         </p>
       </Section>
 
-      <Section title="Recurring costs less per visit">
+      <Section tone="ground" title="Recurring costs less per visit">
         <p>
           A one-time standard clean is $180 and a recurring visit is $160.
           That&apos;s not a loyalty discount. A home cleaned two weeks ago is
@@ -139,7 +120,7 @@ export default function Pricing() {
         </p>
       </Section>
 
-      <Section title="Why there is no per-square-foot rate">
+      <Section tone="surface" title="Why there is no per-square-foot rate">
         <p>
           Cleaning doesn&apos;t scale evenly with floor area. Kitchens and
           bathrooms carry most of the labor, so a 2,600-square-foot home with two
@@ -154,7 +135,7 @@ export default function Pricing() {
         </p>
       </Section>
 
-      <Section title="What is not on the invoice">
+      <Section tone="ground" title="What is not on the invoice">
         <p>
           No trip charge, no supplies or equipment fee, no deposit, and no card
           details taken over the phone to hold a booking.

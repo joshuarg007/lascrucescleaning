@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero, Section, Faq, faqSchema, Schema, type QA } from "@/components/ui";
 import QuoteForm from "@/components/QuoteForm";
+import { image } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -48,9 +49,10 @@ export default function Contact() {
         title="Call or text for a cleaning quote."
         lede="Tell us about the home and the timing. Most quotes take about three minutes."
         showPricesLink={false}
+        image={image("pricing")}
       />
 
-      <Section title="How to reach us">
+      <Section tone="ground" title="How to reach us">
         <p className="text-2xl font-bold">
           <a href={site.phoneHref} className="text-accent">
             {site.phone}
@@ -66,7 +68,7 @@ export default function Contact() {
         <p>Serving {site.areaServed}.</p>
       </Section>
 
-      <Section title="Or send it in writing">
+      <Section tone="ground" title="Or send it in writing">
         <p>
           Send us the basics and we&apos;ll call or text with a price, or ask one
           follow-up question if anything is unclear.
@@ -84,7 +86,7 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section title="What we will ask you">
+      <Section tone="sand" title="What we will ask you">
         <p>Four questions, every time, because the answers are the quote:</p>
         <ol className="list-decimal space-y-2 pl-5 text-lg">
           <li>What the property is, roughly how big, and how many bathrooms.</li>
@@ -97,7 +99,7 @@ export default function Contact() {
         </p>
       </Section>
 
-      <Section title="When to call rather than write">
+      <Section tone="surface" title="When to call rather than write">
         <p>
           If there&apos;s a deadline attached, call. Move-out cleans cluster at
           the end of the month because leases do, and the last few days of any
@@ -110,7 +112,7 @@ export default function Contact() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
     </>

@@ -3,18 +3,30 @@
 @theme {
   --color-ground: #faf9f6;
   --color-surface: #ffffff;
+  --color-sand: #f2eee5;
   --color-ink: #17181a;
   --color-ink-2: #3f4145;
   --color-muted: #5c6066;
   --color-line: #e3e1dc;
   --color-accent: #1f5f4d;
+  --color-accent-deep: #123c30;
   --color-accent-soft: #e7f0ec;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --color-clay: #b4553a;
+  --color-clay-soft: #f6e9e3;
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: var(--font-heading), Georgia, "Times New Roman", serif;
   --font-serif: Georgia, "Times New Roman", serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* The header is fixed from md up, so in-page targets need clearance. */
+@media (min-width: 48rem) {
+  html {
+    scroll-padding-top: 6.5rem;
+  }
 }
 
 body {
@@ -24,7 +36,61 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Section headings carry a small rule above them, drawn in clay. */
+.rule-eyebrow::before {
+  content: "";
+  display: block;
+  width: 2.25rem;
+  height: 3px;
+  margin-bottom: 0.9rem;
+  border-radius: 999px;
+  background: var(--color-clay);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { transition: none !important; animation: none !important; }
+}
+
+/*
+ * The quote form is the Site2CRM widget, which renders into the light DOM as a
+ * single flex column with inline styles. Its field list lives in the Site2CRM
+ * form config, not in this repo, so all we control here is the layout: from
+ * 640px up the short fields pair off into two columns, which roughly halves
+ * how long the form looks. The message box and the submit button stay full
+ * width. The !important is unavoidable, it overrides an inline style.
+ */
+/* The widget ships its own white card at max-width 480px. Ours is the card, so
+   strip its chrome and let it fill, otherwise it is a box inside a box. */
+#s2c-form > div {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-family: inherit !important;
+}
+
+@media (min-width: 40rem) {
+  #s2c-form form > div {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 20px;
+    align-items: start;
+  }
+
+  #s2c-form form > div > div:has(textarea),
+  #s2c-form form > div > button {
+    grid-column: 1 / -1;
+  }
+}
+
+#s2c-form textarea {
+  min-height: 6rem;
 }
