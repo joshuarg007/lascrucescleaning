@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner, Faq, faqSchema, type QA } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Faq, faqSchema, type QA } from "@/components/ui";
 import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -56,11 +56,10 @@ export default function HouseCleaning() {
         eyebrow="House Cleaning"
         title="Regular house cleaning, from $160 a visit."
         lede="Most people choose every other week. Weekly and monthly visits are available too, and the price changes with the schedule."
+        image={image("houseCleaning")}
       />
 
-      <Banner image={image("houseCleaning")} priority />
-
-      <Section title="What is included every visit">
+      <Section tone="surface" title="What is included every visit">
         <Included
           items={[
             "Kitchen counters, sink, stovetop and outside of appliances",
@@ -73,7 +72,7 @@ export default function HouseCleaning() {
         />
       </Section>
 
-      <Section title="How the schedule works">
+      <Section tone="ground" title="How the schedule works">
         <p>
           If the home hasn&apos;t been cleaned professionally in a while,
           we&apos;ll usually recommend starting with a deep clean. A
@@ -86,7 +85,7 @@ export default function HouseCleaning() {
         </p>
       </Section>
 
-      <Section title="What moves the price">
+      <Section tone="sand" title="What moves the price">
         <p>
           Recurring cleaning starts at $160 a visit and a one-time clean at $180,
           for a home of roughly 1,400 to 1,600 square feet. Three things move
@@ -104,7 +103,7 @@ export default function HouseCleaning() {
         </p>
       </Section>
 
-      <Section title="How long a visit takes">
+      <Section tone="surface" title="How long a visit takes">
         <p>
           About three hours with two people on a typical Las Cruces home. A first
           deep clean on the same home takes most of a day. We book by the job, not the hour, so a slow morning doesn&apos;t appear on your
@@ -112,7 +111,7 @@ export default function HouseCleaning() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
 

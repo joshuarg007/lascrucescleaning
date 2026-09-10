@@ -1,9 +1,26 @@
 import type { Metadata } from "next";
+import { Fraunces, Inter } from "next/font/google";
 import Script from "next/script";
 import Link from "next/link";
+import { SiteHeader } from "@/components/SiteHeader";
+import { nav, legalNav } from "@/lib/nav";
 import { site } from "@/lib/site";
 import { ogImage } from "@/lib/images";
 import "./globals.css";
+
+/* Self-hosted by next/font, so the CSP stays font-src 'self'. */
+const heading = Fraunces({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const body = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 const og = ogImage();
 
@@ -26,18 +43,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const nav = [
-  { href: "/house-cleaning/", label: "House Cleaning" },
-  { href: "/deep-cleaning/", label: "Deep Cleaning" },
-  { href: "/move-out-cleaning/", label: "Move-Out" },
-  { href: "/commercial-cleaning/", label: "Commercial" },
-  { href: "/pricing/", label: "Pricing" },
-  { href: "/las-cruces-nm/", label: "Service Area" },
-  { href: "/about/", label: "About" },
-  { href: "/contact/", label: "Contact" },
-];
-
-const legalNav = [{ href: "/privacy/", label: "Privacy" }];
 
 export default function RootLayout({
   children,
@@ -114,7 +119,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <body className="min-h-screen flex flex-col">
         <a
           href="#main-content"
@@ -126,50 +131,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
         />
-        <header className="border-b border-line bg-surface">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-4">
-            <Link href="/" className="shrink-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/las-cruces-cleaning-logo.webp"
-                alt={site.name}
-                width={90}
-                height={48}
-                className="h-12 w-auto"
-              />
-            </Link>
-            <nav className="order-3 w-full sm:order-2 sm:w-auto">
-              <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ink-2">
-                {nav.map((n) => (
-                  <li key={n.href}>
-                    <Link href={n.href} className="hover:text-accent">
-                      {n.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <div className="order-2 flex items-center gap-2 sm:order-3">
-              <a
-                href={site.phoneHref}
-                className="rounded bg-accent px-4 py-2 text-sm font-semibold text-white"
-              >
-                {site.phone}
-              </a>
-              <a
-                href={site.smsHref}
-                className="rounded border border-line px-3 py-2 text-sm font-semibold text-ink"
-              >
-                Text
-              </a>
-            </div>
-          </div>
-        </header>
+        <SiteHeader />
 
         <main id="main-content" className="flex-1">{children}</main>
 
         <footer className="border-t border-line bg-surface">
-          <div className="mx-auto max-w-5xl px-5 py-10 text-sm text-muted">
+          <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-muted">
             <p className="mb-2 font-semibold text-ink">{site.name}</p>
             <p className="mb-1">
               Serving {site.areaServed}. {site.hours}.
@@ -199,7 +166,7 @@ export default function RootLayout({
           </div>
 
           <div className="border-t border-line">
-            <div className="mx-auto flex max-w-5xl flex-col gap-3 px-5 py-5 text-xs text-ink-2 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-xs text-ink-2 sm:flex-row sm:items-center sm:justify-between">
               <span>
                 &copy; {new Date().getFullYear()} {site.name}. Serving{" "}
                 {site.areaServed}.

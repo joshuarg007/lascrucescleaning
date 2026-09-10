@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner, Faq, faqSchema, type QA } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Faq, faqSchema, type QA } from "@/components/ui";
 import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -52,11 +52,10 @@ export default function MoveOutCleaning() {
         eyebrow="Move-Out Cleaning"
         title="Empty house, cleaned for the walkthrough. From $350."
         lede="Booked around your move date, done after the last box is out, finished before the inspection."
+        image={image("moveOutCleaning")}
       />
 
-      <Banner image={image("moveOutCleaning")} priority />
-
-      <Section title="What gets cleaned">
+      <Section tone="surface" title="What gets cleaned">
         <Included
           items={[
             "Inside every cabinet and drawer",
@@ -71,7 +70,7 @@ export default function MoveOutCleaning() {
         />
       </Section>
 
-      <Section title="Timing is the whole job">
+      <Section tone="ground" title="Timing is the whole job">
         <p>
           A move-out clean has a deadline attached to it, usually a landlord
           walkthrough or a closing. Tell us the date when you call and we work
@@ -83,7 +82,7 @@ export default function MoveOutCleaning() {
         </p>
       </Section>
 
-      <Section title="What it costs">
+      <Section tone="sand" title="What it costs">
         <p>
           A move-out clean starts at $350 for a home of roughly 1,400 to 1,600
           square feet. It&apos;s priced above a deep clean of the same home
@@ -97,7 +96,7 @@ export default function MoveOutCleaning() {
         </p>
       </Section>
 
-      <Section title="The areas most often missed before a walkthrough">
+      <Section tone="surface" title="The areas most often missed before a walkthrough">
         <p>
           The oven, the refrigerator, the inside of kitchen cabinets, the
           bathroom grout and hardware, the baseboards, and the floor in the
@@ -111,7 +110,7 @@ export default function MoveOutCleaning() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
 

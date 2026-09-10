@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero, Section } from "@/components/ui";
+import { image } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,9 +19,10 @@ export default function Privacy() {
         title="What we do with your information."
         lede="Short, because we collect very little of it."
         showPricesLink={false}
+        image={image("moveOutCleaning")}
       />
 
-      <Section title="What we collect">
+      <Section tone="ground" title="What we collect">
         <p>
           When you use the quote form, we collect your name, phone number, and an
           email address if you give one, along with whatever you tell us about
@@ -33,7 +35,7 @@ export default function Privacy() {
         </p>
       </Section>
 
-      <Section title="What we do with it">
+      <Section tone="ground" title="What we do with it">
         <p>
           We use it to respond to your request, to quote the cleaning, and to
           contact you about work you have booked with us. That is all. We
@@ -42,7 +44,7 @@ export default function Privacy() {
         </p>
       </Section>
 
-      <Section title="Who else sees it">
+      <Section tone="sand" title="Who else sees it">
         <p>
           Form submissions are delivered through Site2CRM, the software that runs
           the form and stores the messages so we can answer them. Nobody else
@@ -51,7 +53,7 @@ export default function Privacy() {
         </p>
       </Section>
 
-      <Section title="How long we keep it">
+      <Section tone="surface" title="How long we keep it">
         <p>
           We keep quote requests and contact details for as long as we
           are working together, and for a reasonable period afterward for
@@ -59,7 +61,7 @@ export default function Privacy() {
         </p>
       </Section>
 
-      <Section title="Asking us about your information">
+      <Section tone="ground" title="Asking us about your information">
         <p>
           Call or text {site.phone} and ask. You can request a copy of what we
           hold, ask us to correct it, or ask us to delete it.

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner, Faq, faqSchema, type QA } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Faq, faqSchema, type QA } from "@/components/ui";
 import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -54,11 +54,10 @@ export default function CommercialCleaning() {
         lede="We walk the space, write down what gets cleaned and how often, and quote a per-visit price before the first service."
         showPricesLink={false}
         secondary={{ href: "/contact/", label: "Arrange a walkthrough" }}
+        image={image("commercialCleaning")}
       />
 
-      <Banner image={image("commercialCleaning")} priority />
-
-      <Section title="What we take on">
+      <Section tone="surface" title="What we take on">
         <p>
           Offices, studios, salons, clinics and small retail. The practical limit
           is size, not industry: two people can cover a few thousand
@@ -78,7 +77,7 @@ export default function CommercialCleaning() {
 
 
 
-      <Section title="What the walkthrough covers">
+      <Section tone="ground" title="What the walkthrough covers">
         <p>
           Twenty minutes in your space tells us what a phone call can&apos;t: the
           floor surfaces, the restroom count and condition, how many desks,
@@ -92,7 +91,7 @@ export default function CommercialCleaning() {
         </p>
       </Section>
 
-      <Section title="What appears in the written scope">
+      <Section tone="sand" title="What appears in the written scope">
         <p>
           Every item, with the frequency next to it, so both sides can check six
           months later what was agreed. A small office might read:
@@ -108,7 +107,7 @@ export default function CommercialCleaning() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="surface" title="Common questions">
         <Faq items={faq} />
       </Section>
 

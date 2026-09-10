@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Banner, Faq, faqSchema, type QA } from "@/components/ui";
+import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Faq, faqSchema, type QA } from "@/components/ui";
 import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -52,11 +52,10 @@ export default function DeepCleaning() {
         eyebrow="Deep Cleaning"
         title="Deep cleaning in Las Cruces, from $320."
         lede="For a home that needs more than routine upkeep: before recurring service, after a long gap, or before it goes on the market."
+        image={image("deepCleaning")}
       />
 
-      <Banner image={image("deepCleaning")} priority />
-
-      <Section title="What a deep clean adds">
+      <Section tone="surface" title="What a deep clean adds">
         <p>
           Everything in a standard clean, plus the work that a regular visit does
           not have time for:
@@ -75,7 +74,7 @@ export default function DeepCleaning() {
         />
       </Section>
 
-      <Section title="Who this is for">
+      <Section tone="ground" title="Who this is for">
         <p>
           Three situations account for nearly all of them: a home that has never
           had a professional clean, one where the last was a year or more ago,
@@ -88,7 +87,7 @@ export default function DeepCleaning() {
         </p>
       </Section>
 
-      <Section title="What it costs">
+      <Section tone="sand" title="What it costs">
         <p>
           A deep clean starts at $320 for a home of roughly 1,400 to 1,600 square
           feet. Your quote moves with size, bathroom count, and most of all with
@@ -101,7 +100,7 @@ export default function DeepCleaning() {
         </p>
       </Section>
 
-      <Section title="How to get the most out of it">
+      <Section tone="surface" title="How to get the most out of it">
         <p>
           Clear the surfaces you want cleaned, along with closet floors and the
           area under beds. A deep clean is about reaching what a normal visit
@@ -116,7 +115,7 @@ export default function DeepCleaning() {
         </p>
       </Section>
 
-      <Section title="Common questions">
+      <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
 
