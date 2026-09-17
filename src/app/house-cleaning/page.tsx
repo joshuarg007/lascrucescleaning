@@ -4,7 +4,8 @@ import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "Recurring House Cleaning in Las Cruces, NM",
+  /* Absolute, so the "| Las Cruces Cleaning" template does not push it past 60 characters. */
+  title: { absolute: "Recurring House Cleaning in Las Cruces, NM" },
   description:
     "Recurring and one-time house cleaning in Las Cruces. From $160 a visit every two weeks, with the same cleaners at every visit.",
   alternates: { canonical: "/house-cleaning/" },

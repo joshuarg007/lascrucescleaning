@@ -13,7 +13,8 @@ import { image } from "@/lib/images";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Cleaning Services in Las Cruces and Mesilla, NM",
+  /* Absolute, so the "| Las Cruces Cleaning" template does not push it past 60 characters. */
+  title: { absolute: "Cleaning Services in Las Cruces and Mesilla, NM" },
   description:
     "House cleaning in Las Cruces, Mesilla, and nearby areas. See where we work, starting prices, and when to call about an address.",
   alternates: { canonical: "/las-cruces-nm/" },
