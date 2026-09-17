@@ -4,7 +4,8 @@ import Script from "next/script";
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
 import { nav, legalNav } from "@/lib/nav";
-import { site } from "@/lib/site";
+import { site, social } from "@/lib/site";
+import { SocialLinks } from "@/components/SocialLinks";
 import { ogImage } from "@/lib/images";
 import "./globals.css";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
     telephone: "+1-575-386-5714",
     email: site.email,
     logo: `${site.url}/las-cruces-cleaning-logo.webp`,
+    sameAs: social.map((s) => s.href),
     priceRange: "$$",
     currenciesAccepted: "USD",
     ...(og ? { image: `${site.url}${og}` } : {}),
@@ -163,6 +165,9 @@ export default function RootLayout({
                 </li>
               ))}
             </ul>
+
+            <h2 className="sr-only">Follow Las Cruces Cleaning</h2>
+            <SocialLinks className="mt-6" />
           </div>
 
           <div className="border-t border-line">
