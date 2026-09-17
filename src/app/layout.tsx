@@ -6,7 +6,6 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { nav, legalNav } from "@/lib/nav";
 import { site, social } from "@/lib/site";
 import { SocialLinks } from "@/components/SocialLinks";
-import { ShareLinks } from "@/components/ShareLinks";
 import { ogImage } from "@/lib/images";
 import "./globals.css";
 
@@ -166,8 +165,6 @@ export default function RootLayout({
                 </li>
               ))}
             </ul>
-
-            <ShareLinks />
 
             <h2 className="sr-only">Follow Las Cruces Cleaning</h2>
             <SocialLinks className="mt-6" />
