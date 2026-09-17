@@ -30,8 +30,15 @@ export default function Privacy() {
           quote the job and schedule it.
         </p>
         <p>
-          The website itself does not run advertising trackers and does not set
-          cookies to follow you to other sites.
+          The chat bubble in the corner of this site is run by Site2CRM. Anything
+          you type into it reaches us the same way a form submission does, so
+          treat it as a message to us rather than a private note. It collects
+          what you type and nothing more.
+        </p>
+        <p>
+          The website itself does not run advertising trackers, does not use
+          Google Analytics, and does not set cookies to follow you to other
+          sites.
         </p>
       </Section>
 
@@ -42,14 +49,26 @@ export default function Privacy() {
           don&apos;t sell it, we don&apos;t rent it, and we don&apos;t add you to
           a marketing list.
         </p>
+        <p>
+          If you send us a phone number, we may text you about your quote or your
+          appointment. Reply STOP to any message and we will stop texting you.
+          Standard message rates from your carrier still apply.
+        </p>
       </Section>
 
       <Section tone="sand" title="Who else sees it">
         <p>
-          Form submissions are delivered through Site2CRM, the software that runs
-          the form and stores the messages so we can answer them. Nobody else
-          receives your details, and we don&apos;t share them with other cleaning
-          companies, lead brokers or advertisers.
+          Form submissions and chat messages are delivered through Site2CRM, the
+          software that runs the form and stores the messages so we can answer
+          them. Nobody else receives your details, and we don&apos;t share them
+          with other cleaning companies, lead brokers or advertisers.
+        </p>
+        <p>
+          This site is hosted on Amazon Web Services. Like any web host, it keeps
+          server logs that record the IP address and browser of each request.
+          Those logs exist to keep the site running and to stop abuse. We do not
+          use them to build a profile of you, and we do not connect them to your
+          quote request.
         </p>
       </Section>
 
@@ -59,14 +78,37 @@ export default function Privacy() {
           are working together, and for a reasonable period afterward for
           scheduling and tax records. Ask us to delete your details and we will.
         </p>
+        <p>
+          A quote that never turned into a booking gets cleared out once it is
+          clearly stale. We keep records tied to work we actually performed for
+          longer, because tax rules require it.
+        </p>
+      </Section>
+
+      <Section tone="ground" title="Children">
+        <p>
+          This site sells a cleaning service to adults and is not directed at
+          children. We do not knowingly collect information from anyone under 13.
+          If you believe a child has sent us their details, call or text us and we
+          will delete them.
+        </p>
       </Section>
 
       <Section tone="ground" title="Asking us about your information">
         <p>
           Call or text {site.phone} and ask. You can request a copy of what we
-          hold, ask us to correct it, or ask us to delete it.
+          hold, ask us to correct it, or ask us to delete it. You can also email{" "}
+          <a href={site.emailHref}>{site.email}</a>. We answer these ourselves,
+          so there is no form to fill out and no ticket queue.
+        </p>
+        <p>
+          If we change this notice, the changed version replaces this one on this
+          page. We are a two-person cleaning company in Las Cruces, not a data
+          business, and any change here will be about describing what we do more
+          plainly rather than collecting more from you.
         </p>
       </Section>
+
     </>
   );
 }
