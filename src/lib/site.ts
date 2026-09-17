@@ -14,6 +14,26 @@ export const site = {
   emailHref: "mailto:info@lascrucescleaning.com",
 };
 
+/** Profiles the business actually posts to. Doubles as schema.org sameAs. */
+export const social = [
+  { name: "Facebook", href: "https://www.facebook.com/LasCrucesCleaning/" },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/lascrucescleaningcompany/",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/las-cruces-cleaning",
+  },
+  { name: "X", href: "https://x.com/LasCrucesClean" },
+  {
+    name: "Bluesky",
+    href: "https://bsky.app/profile/lascrucescleaning.bsky.social",
+  },
+  { name: "Pinterest", href: "https://www.pinterest.com/lascrucescleaning/" },
+  { name: "YouTube", href: "https://www.youtube.com/@LasCrucesCleaning" },
+];
+
 export type Price = {
   service: string;
   from: number;
