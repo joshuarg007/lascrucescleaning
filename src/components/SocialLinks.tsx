@@ -21,8 +21,19 @@ const icons: Record<string, string> = {
     "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z",
 };
 
-/** The profile row for the footer. One line, monochrome, tinted on hover. */
-export function SocialLinks({ className = "" }: { className?: string }) {
+/**
+ * The profile row. Used in the footer at full size, and in the header at a
+ * smaller size where the tone has to follow the bar over a dark hero.
+ */
+export function SocialLinks({
+  className = "",
+  linkClassName = "text-muted hover:text-accent",
+  iconClassName = "h-5 w-5",
+}: {
+  className?: string;
+  linkClassName?: string;
+  iconClassName?: string;
+}) {
   return (
     <ul className={`flex flex-wrap items-center gap-4 ${className}`}>
       {social.map((s) => (
@@ -34,13 +45,13 @@ export function SocialLinks({ className = "" }: { className?: string }) {
             rel="me noopener noreferrer"
             aria-label={`${s.name}, opens in a new tab`}
             title={s.name}
-            className="block text-muted transition-colors hover:text-accent"
+            className={`block transition-colors ${linkClassName}`}
           >
             <svg
               aria-hidden
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="h-5 w-5"
+              className={iconClassName}
             >
               <path d={icons[s.name]} />
             </svg>

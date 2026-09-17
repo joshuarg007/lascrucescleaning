@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { mainNav, serviceNav } from "@/lib/nav";
 import { site } from "@/lib/site";
+import { SocialLinks } from "./SocialLinks";
 
 /**
  * Every hero on this site is dark, so from md up the header rides over it with
@@ -115,6 +116,20 @@ export function SiteHeader() {
           </ul>
         </nav>
 
+        {/*
+          960, not a named breakpoint: the bar needs 876px of content width, so
+          the icons are the first thing to overflow the pill below that.
+        */}
+        <SocialLinks
+          className="hidden shrink-0 min-[960px]:flex"
+          iconClassName="h-4 w-4"
+          linkClassName={
+            scrolled
+              ? "text-ink-2 hover:text-accent"
+              : "text-white/75 hover:text-white"
+          }
+        />
+
         <a
           href={site.phoneHref}
           className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-all ${
@@ -138,6 +153,10 @@ export function SiteHeader() {
             </li>
           ))}
         </ul>
+        <SocialLinks
+          className="mx-auto max-w-6xl gap-3 px-5 pb-3"
+          iconClassName="h-4 w-4"
+        />
       </nav>
     </header>
   );
