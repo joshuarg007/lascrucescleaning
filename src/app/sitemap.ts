@@ -2,6 +2,7 @@ export const dynamic = "force-static";
 
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
+import { allTips } from "@/lib/tips";
 
 const routes = [
   "",
@@ -14,10 +15,12 @@ const routes = [
   "/about",
   "/contact",
   "/privacy",
+  "/cleaning-tips",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((r) => ({
+  const tipRoutes = allTips().map((t) => `/cleaning-tips/${t.slug}`);
+  return [...routes, ...tipRoutes].map((r) => ({
     url: `${site.url}${r}/`.replace(/([^:]\/)\/+/g, "$1"),
     lastModified: new Date(),
     changeFrequency: r === "" ? "weekly" : "monthly",

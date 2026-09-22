@@ -433,3 +433,26 @@ export function Schema({ data }: { data: object }) {
     />
   );
 }
+
+export function videoSchema(v: {
+  title: string;
+  description: string;
+  youtubeId: string;
+  publishedAt: string;
+  duration: string;
+  transcript: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: v.title,
+    description: v.description,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`],
+    uploadDate: v.publishedAt,
+    ...(v.duration ? { duration: v.duration } : {}),
+    embedUrl: `https://www.youtube.com/embed/${v.youtubeId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${v.youtubeId}`,
+    publisher: { "@type": "Organization", name: site.name, url: site.url },
+    transcript: v.transcript.join("\n\n"),
+  };
+}

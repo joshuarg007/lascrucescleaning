@@ -8,6 +8,7 @@ export const serviceNav = [
 export const mainNav = [
   { href: "/pricing/", label: "Pricing" },
   { href: "/las-cruces-nm/", label: "Service Area" },
+  { href: "/cleaning-tips/", label: "Cleaning Tips" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
 ];
