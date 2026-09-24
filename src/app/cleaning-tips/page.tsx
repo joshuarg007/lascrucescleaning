@@ -4,9 +4,9 @@ import { Hero, Section, CallToAction } from "@/components/ui";
 import { allTips } from "@/lib/tips";
 
 export const metadata: Metadata = {
-  title: "Cleaning Tips and How-To Videos | Las Cruces",
+  title: "Cleaning Tips from a Las Cruces Cleaning Company",
   description:
-    "Short cleaning how-to videos from a working Las Cruces cleaning company, each with the full written method. Hard water, dust, grout and move-out cleaning.",
+    "How we handle hard water, desert dust, grout, swamp coolers and move-out cleans in Las Cruces. Every method written out step by step.",
   alternates: { canonical: "/cleaning-tips/" },
   openGraph: { url: "/cleaning-tips/" },
 };
@@ -19,12 +19,12 @@ export default function CleaningTips() {
       <Hero
         eyebrow="Cleaning Tips"
         title="How we actually do it."
-        lede="Short videos from real jobs around Las Cruces, each written out in full so you can follow it without watching."
+        lede="The methods we use on real jobs around Las Cruces, written out step by step so you can follow along."
       />
 
       <Section tone="surface" title="Every method, written out">
         {tips.length === 0 ? (
-          <p>The first videos are on their way.</p>
+          <p>The first tips are on their way.</p>
         ) : (
           <div className="not-prose grid gap-8 sm:grid-cols-2">
             {tips.map((t) => (

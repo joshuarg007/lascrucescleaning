@@ -8,7 +8,8 @@ export type Tip = {
   title: string;
   metaTitle: string;
   metaDescription: string;
-  youtubeId: string;
+  /** 11-char YouTube id, or null for a written tip with no video. */
+  youtubeId: string | null;
   publishedAt: string;
   duration: string;
   summary: string;
@@ -22,7 +23,7 @@ const DIR = path.join(process.cwd(), "src/content/tips");
 
 // Only the fields the page cannot render without. A tip missing one is a
 // generator bug, so fail the build rather than ship a half-empty page.
-const REQUIRED = ["slug", "title", "metaTitle", "metaDescription", "youtubeId", "publishedAt", "summary"] as const;
+const REQUIRED = ["slug", "title", "metaTitle", "metaDescription", "publishedAt", "summary"] as const;
 
 function read(file: string): Tip {
   const raw = JSON.parse(fs.readFileSync(path.join(DIR, file), "utf8"));
@@ -32,7 +33,7 @@ function read(file: string): Tip {
   if (!Array.isArray(raw.transcript) || raw.transcript.length === 0) {
     throw new Error(`src/content/tips/${file} has no transcript, which is the whole point of the page`);
   }
-  return { duration: "", localNote: "", faq: [], relatedService: null, ...raw } as Tip;
+  return { youtubeId: null, duration: "", localNote: "", faq: [], relatedService: null, ...raw } as Tip;
 }
 
 export function allTips(): Tip[] {
