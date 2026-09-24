@@ -434,6 +434,26 @@ export function Schema({ data }: { data: object }) {
   );
 }
 
+// A written tip with no video. Same page, different primary entity, so the
+// transcript still has something to hang off in the graph.
+export function articleSchema(a: {
+  title: string;
+  description: string;
+  slug: string;
+  publishedAt: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.description,
+    datePublished: a.publishedAt,
+    mainEntityOfPage: `${site.url}/cleaning-tips/${a.slug}/`,
+    author: { "@type": "Organization", name: site.name, url: site.url },
+    publisher: { "@type": "Organization", name: site.name, url: site.url },
+  };
+}
+
 export function videoSchema(v: {
   title: string;
   description: string;

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Hero, Section, CallToAction, Schema, Faq, faqSchema, videoSchema } from "@/components/ui";
+import { Hero, Section, CallToAction, Schema, Faq, faqSchema, videoSchema, articleSchema } from "@/components/ui";
 import { VideoEmbed } from "@/components/VideoEmbed";
 import { allTips, tipBySlug } from "@/lib/tips";
 
-// `output: export` refuses an empty param list, so before the first video
+// `output: export` refuses an empty param list, so before the first tip
 // exists we emit one noindexed placeholder. It is not linked and not in the
 // sitemap, and it disappears on its own as soon as a real tip lands.
 const PLACEHOLDER = "coming-soon";
@@ -46,7 +46,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
     if (slug !== PLACEHOLDER) notFound();
     return (
       <>
-        <Hero eyebrow="Cleaning Tips" title="The first videos are on their way." lede="Check back shortly." />
+        <Hero eyebrow="Cleaning Tips" title="The first tips are on their way." lede="Check back shortly." />
         <Section tone="surface">
           <p>
             <Link href="/cleaning-tips/" className="underline">Back to cleaning tips</Link>
@@ -59,23 +59,34 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   return (
     <>
       <Schema
-        data={videoSchema({
-          title: tip.title,
-          description: tip.metaDescription,
-          youtubeId: tip.youtubeId,
-          publishedAt: tip.publishedAt,
-          duration: tip.duration,
-          transcript: tip.transcript,
-        })}
+        data={
+          tip.youtubeId
+            ? videoSchema({
+                title: tip.title,
+                description: tip.metaDescription,
+                youtubeId: tip.youtubeId,
+                publishedAt: tip.publishedAt,
+                duration: tip.duration,
+                transcript: tip.transcript,
+              })
+            : articleSchema({
+                title: tip.title,
+                description: tip.metaDescription,
+                slug: tip.slug,
+                publishedAt: tip.publishedAt,
+              })
+        }
       />
       {tip.faq.length > 0 && <Schema data={faqSchema(tip.faq)} />}
 
       <Hero eyebrow="Cleaning Tips" title={tip.title} lede={tip.summary} />
 
       <Section tone="surface">
-        <div className="not-prose mb-8">
-          <VideoEmbed youtubeId={tip.youtubeId} title={tip.title} />
-        </div>
+        {tip.youtubeId && (
+          <div className="not-prose mb-8">
+            <VideoEmbed youtubeId={tip.youtubeId} title={tip.title} />
+          </div>
+        )}
         {tip.transcript.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
