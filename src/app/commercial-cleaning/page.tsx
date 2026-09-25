@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Faq, faqSchema, type QA } from "@/components/ui";
+import { RelatedTips } from "@/components/RelatedTips";
 import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -110,6 +111,9 @@ export default function CommercialCleaning() {
       <Section tone="surface" title="Common questions">
         <Faq items={faq} />
       </Section>
+
+      <RelatedTips service="commercial-cleaning" />
+
 
       <CallToAction line={`Arrange a walkthrough. Call ${site.phone}.`} />
     </>
