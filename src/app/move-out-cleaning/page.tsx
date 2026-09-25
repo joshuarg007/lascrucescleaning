@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero, Section, Included, CallToAction, Schema, serviceSchema, Faq, faqSchema, type QA } from "@/components/ui";
+import { RelatedTips } from "@/components/RelatedTips";
 import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
@@ -113,6 +114,9 @@ export default function MoveOutCleaning() {
       <Section tone="ground" title="Common questions">
         <Faq items={faq} />
       </Section>
+
+      <RelatedTips service="move-out-cleaning" />
+
 
       <CallToAction line={`Call ${site.phone} with your move date.`} />
     </>
