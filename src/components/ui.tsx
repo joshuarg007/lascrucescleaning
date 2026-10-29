@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, type Price } from "@/lib/site";
+import { site } from "@/lib/site";
 import type { SiteImage } from "@/lib/images";
 
 export type Tone = "ground" | "surface" | "sand" | "dark" | "accent";
@@ -276,61 +276,7 @@ export function Included({ items, tone = "ground" }: { items: string[]; tone?: T
   );
 }
 
-/** Published prices are the whole pitch, so they get to be the loudest thing here. */
-export function PriceCards({
-  prices,
-  highlight,
-}: {
-  prices: Price[];
-  highlight?: string;
-}) {
-  return (
-    <div className="not-prose grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {prices.map((p) => {
-        const lead = p.service === highlight;
-        return (
-          <div
-            key={p.service}
-            className={`flex flex-col rounded-xl border p-6 ${
-              lead
-                ? "border-accent bg-accent-deep text-white shadow-xl shadow-accent/15"
-                : "border-line bg-surface"
-            }`}
-          >
-            {lead ? (
-              <span className="mb-3 w-fit rounded-full bg-clay px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
-                Most booked
-              </span>
-            ) : null}
-            <p className={`text-sm font-semibold ${lead ? "text-white" : "text-ink"}`}>
-              {p.service}
-            </p>
-            <p className="mt-4 flex items-baseline gap-1.5">
-              <span className={`text-xs font-medium ${lead ? "text-white/60" : "text-muted"}`}>
-                from
-              </span>
-              <span
-                className={`font-display text-4xl font-semibold tracking-tight ${
-                  lead ? "text-white" : "text-ink"
-                }`}
-              >
-                ${p.from}
-              </span>
-            </p>
-            <p className={`mt-1 text-xs ${lead ? "text-white/60" : "text-muted"}`}>{p.unit}</p>
-            <p
-              className={`mt-4 border-t pt-4 text-sm leading-relaxed ${
-                lead ? "border-white/20 text-white/75" : "border-line text-ink-2"
-              }`}
-            >
-              {p.detail}
-            </p>
-          </div>
-        );
-      })}
-    </div>
-  );
-}
+export { PriceCards } from "./PriceCards";
 
 /** Numbered steps, sized so the sequence reads before the words do. */
 export function Steps({ steps }: { steps: { title: string; body: string }[] }) {
