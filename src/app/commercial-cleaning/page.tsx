@@ -5,9 +5,9 @@ import { site } from "@/lib/site";
 import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "Commercial Cleaning in Las Cruces, NM",
+  title: "Office and Commercial Cleaning in Las Cruces, NM",
   description:
-    "Office and small commercial cleaning in Las Cruces, scheduled after hours. Quoted per visit against a written scope.",
+    "Office, clinic and workplace cleaning in Las Cruces, scheduled after hours on a written scope. Quoted per visit after a walkthrough, with no lock-in term.",
   alternates: { canonical: "/commercial-cleaning/" },
   openGraph: { url: "/commercial-cleaning/" },
 };
@@ -28,6 +28,14 @@ const faq: QA[] = [
   {
     q: "Do you sign a contract?",
     a: "A written scope and schedule, yes. A long lock-in term, no.",
+  },
+  {
+    q: "Do you clean rental units between tenants?",
+    a: "Yes. For landlords and property managers that is our move-out scope applied unit by unit, priced per unit once we have seen one of them. If the units are near-identical, one walkthrough prices the whole property.",
+  },
+  {
+    q: "How does billing work for a business?",
+    a: "An invoice rather than a card at the door, on whatever cycle suits your bookkeeping, monthly or per visit, agreed before the first service. No deposit, and applicable New Mexico gross receipts tax is shown separately.",
   },
   {
     q: "Do you handle restroom supplies?",
@@ -60,9 +68,10 @@ export default function CommercialCleaning() {
 
       <Section tone="surface" title="What we take on">
         <p>
-          Offices, studios, salons, clinics and small retail. The practical limit
-          is size, not industry: two people can cover a few thousand
-          square feet properly in an evening.
+          Offices, studios, salons, clinics, small retail, and rental units
+          between tenants for landlords and property managers. The practical
+          limit is size, not industry: two people can cover a few thousand square
+          feet properly in an evening.
         </p>
         <Included
           items={[
@@ -78,7 +87,22 @@ export default function CommercialCleaning() {
 
 
 
-      <Section tone="ground" title="What the walkthrough covers">
+      <Section tone="ground" title="Why a business hires us rather than a national">
+        <p>
+          The two owners are the two cleaners. Nobody is dispatched to your
+          office who has not met you, and the people who agreed the scope are the
+          people in the building at night. That matters more in a small office
+          than it does in a hotel.
+        </p>
+        <p>
+          It also sets an honest ceiling. We are not bidding on your whole
+          portfolio or a 40,000 square foot building, and we will say so on the
+          phone rather than win the work and subcontract it. What we will do is
+          hold a fixed evening slot every week for years.
+        </p>
+      </Section>
+
+      <Section tone="surface" title="What the walkthrough covers">
         <p>
           Twenty minutes in your space tells us what a phone call can&apos;t: the
           floor surfaces, the restroom count and condition, how many desks,

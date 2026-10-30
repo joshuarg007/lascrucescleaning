@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   /* Absolute, so the "| Las Cruces Cleaning" template does not push it past 60 characters. */
   title: { absolute: "Recurring House Cleaning in Las Cruces, NM" },
   description:
-    "Recurring and one-time house cleaning in Las Cruces. From $160 a visit every two weeks, with the same cleaners at every visit.",
+    "Recurring and one-time house cleaning in Las Cruces, starting at $160 a visit every two weeks, with the same cleaners at every visit.",
   alternates: { canonical: "/house-cleaning/" },
   openGraph: { url: "/house-cleaning/" },
 };
@@ -51,12 +51,12 @@ export default function HouseCleaning() {
       <Schema
         data={serviceSchema(
           "House Cleaning",
-          "Recurring and one-time residential cleaning in Las Cruces, New Mexico, from $160 per visit.",
+          "Recurring and one-time residential cleaning in Las Cruces, New Mexico, starting at $160 per visit.",
         )}
       />
       <Hero
         eyebrow="House Cleaning"
-        title="Regular house cleaning, from $160 a visit."
+        title="Regular house cleaning, starting at $160 a visit."
         lede="Most people choose every other week. Weekly and monthly visits are available too, and the price changes with the schedule."
         image={image("houseCleaning")}
       />

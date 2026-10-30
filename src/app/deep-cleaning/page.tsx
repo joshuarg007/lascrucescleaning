@@ -7,7 +7,7 @@ import { image } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Deep Cleaning in Las Cruces, NM",
   description:
-    "Deep cleaning in Las Cruces from $320. Baseboards, inside appliances, grout and vents, the build-up a standard clean does not reach.",
+    "Deep cleaning in Las Cruces, starting at $320. Baseboards, inside appliances, grout and vents, the build-up a standard clean does not reach.",
   alternates: { canonical: "/deep-cleaning/" },
   openGraph: { url: "/deep-cleaning/" },
 };
@@ -46,12 +46,12 @@ export default function DeepCleaning() {
       <Schema
         data={serviceSchema(
           "Deep Cleaning",
-          "One-time deep cleaning for homes in Las Cruces, New Mexico, from $320.",
+          "One-time deep cleaning for homes in Las Cruces, New Mexico, starting at $320.",
         )}
       />
       <Hero
         eyebrow="Deep Cleaning"
-        title="Deep cleaning in Las Cruces, from $320."
+        title="Deep cleaning in Las Cruces, starting at $320."
         lede="For a home that needs more than routine upkeep: before recurring service, after a long gap, or before it goes on the market."
         image={image("deepCleaning")}
       />

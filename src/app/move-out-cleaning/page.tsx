@@ -7,7 +7,7 @@ import { image } from "@/lib/images";
 export const metadata: Metadata = {
   title: "Move-Out Cleaning in Las Cruces, NM",
   description:
-    "Move-out and move-in cleaning in Las Cruces from $350. Empty houses cleaned for the landlord walkthrough or the new owner.",
+    "Move-out and move-in cleaning in Las Cruces, starting at $350. Empty houses cleaned for the landlord walkthrough or the new owner.",
   alternates: { canonical: "/move-out-cleaning/" },
   openGraph: { url: "/move-out-cleaning/" },
 };
@@ -46,12 +46,12 @@ export default function MoveOutCleaning() {
       <Schema
         data={serviceSchema(
           "Move-Out Cleaning",
-          "Move-out and move-in cleaning for empty homes in Las Cruces, New Mexico, from $350.",
+          "Move-out and move-in cleaning for empty homes in Las Cruces, New Mexico, starting at $350.",
         )}
       />
       <Hero
         eyebrow="Move-Out Cleaning"
-        title="Empty house, cleaned for the walkthrough. From $350."
+        title="Empty house, cleaned for the walkthrough. Starting at $350."
         lede="Booked around your move date, done after the last box is out, finished before the inspection."
         image={image("moveOutCleaning")}
       />

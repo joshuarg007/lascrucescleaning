@@ -10,6 +10,7 @@ import {
   Schema,
   Included,
   PriceCards,
+  CommercialCallout,
   Steps,
   TrustStrip,
   type QA,
@@ -18,9 +19,9 @@ import { prices, services, site } from "@/lib/site";
 import { cardImage, image } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: { absolute: "House Cleaning in Las Cruces, NM: Prices From $160" },
+  title: { absolute: "House and Office Cleaning in Las Cruces, NM" },
   description:
-    "House cleaning, deep cleaning and move-out cleaning in Las Cruces, New Mexico. Prices published up front, starting at $160 a visit. Call (575) 386-5714.",
+    "Office, house, deep and move-out cleaning in Las Cruces, New Mexico. Homes start at $160 a visit, offices are quoted per visit after a walkthrough. Call (575) 386-5714.",
   alternates: { canonical: "/" },
 };
 
@@ -28,6 +29,10 @@ const faq: QA[] = [
   {
     q: "How much does house cleaning cost in Las Cruces?",
     a: "Recurring cleaning starts at $160 a visit, a one-time standard clean at $180, a first deep clean at $320 and a move-out clean at $350. Those starting prices assume a home of roughly 1,400 to 1,600 square feet with three bedrooms and two bathrooms.",
+  },
+  {
+    q: "Do you clean offices and commercial spaces?",
+    a: "Yes, and it is work we are actively taking on. Offices, clinics, studios, salons and small retail, cleaned after hours on a fixed weekday schedule. Commercial jobs are quoted per visit against a written scope after a walkthrough, because restrooms, floor surfaces and frequency move an office price far more than square footage does.",
   },
   {
     q: "Why do you publish prices when nobody else does?",
@@ -53,16 +58,16 @@ export default function Home() {
       <Schema data={faqSchema(faq)} />
       <Hero
         eyebrow="Las Cruces, New Mexico"
-        title="House cleaning in Las Cruces, with the price on the page."
-        lede="Recurring cleaning starts at $160 a visit. Tell us the size of the home, the number of bathrooms, and when it was last cleaned, and we'll quote the job before you book."
+        title="Home and office cleaning in Las Cruces, priced before you book."
+        lede="Recurring house cleaning starts at $160 a visit, and offices are quoted per visit after a walkthrough. Either way you get the number before any work starts, not after."
         image={image("homeHero")}
       />
 
       <TrustStrip
         items={[
           {
-            label: "Prices on the page",
-            detail: "Starting numbers published, before you call anyone.",
+            label: "Starting prices published",
+            detail: "A floor you can plan against, before you call anyone.",
           },
           {
             label: "The same two cleaners",
@@ -85,16 +90,44 @@ export default function Home() {
         title="What cleaning costs in Las Cruces"
       >
         <p>
-          These are starting prices for a home of roughly 1,400 to 1,600 square
-          feet with three bedrooms and two bathrooms. Your quote moves with size,
-          bathroom count and condition, and you get it before we start.
+          Every number below is a starting price, not a flat rate. Each one
+          assumes a home of roughly 1,400 to 1,600 square feet with three
+          bedrooms and two bathrooms, and your quote moves up from there with
+          size, bathroom count and condition. You get that quote before we start.
         </p>
         <div className="not-prose pt-2">
           <PriceCards prices={prices} highlight="Recurring clean, every two weeks" />
+          <CommercialCallout />
         </div>
         <p className="text-sm">
           <Link href="/pricing/" className="font-semibold text-accent underline-offset-4 hover:underline">
             What moves the price, and what is included
+          </Link>
+        </p>
+      </Section>
+
+      <Section
+        tone="accent"
+        eyebrow="For businesses"
+        title="Offices, clinics and workplaces, cleaned after hours"
+      >
+        <p>
+          We clean small commercial spaces across Las Cruces on a fixed weekday
+          schedule, outside your open hours, so nobody works around a vacuum. The
+          scope goes in writing with a frequency next to every line, the price is
+          per visit, and it does not change without a conversation first.
+        </p>
+        <p>
+          Property managers, offices, studios, salons, clinic front-of-house and
+          small retail. Two people can cover a few thousand square feet properly
+          in an evening, which is the honest limit on what we will take.
+        </p>
+        <p className="text-sm">
+          <Link
+            href="/commercial-cleaning/"
+            className="font-semibold text-clay-soft underline-offset-4 hover:underline"
+          >
+            What commercial service covers, and how a walkthrough works
           </Link>
         </p>
       </Section>
