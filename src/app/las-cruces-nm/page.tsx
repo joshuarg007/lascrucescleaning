@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   /* Absolute, so the "| Las Cruces Cleaning" template does not push it past 60 characters. */
   title: { absolute: "Cleaning Services in Las Cruces and Mesilla, NM" },
   description:
-    "House cleaning in Las Cruces, Mesilla, and nearby areas. See where we work, starting prices, and when to call about an address.",
+    "House and office cleaning in Las Cruces, Mesilla, and nearby areas. See where we work, starting prices, and when to call about an address.",
   alternates: { canonical: "/las-cruces-nm/" },
   openGraph: { url: "/las-cruces-nm/" },
 };
@@ -100,6 +100,12 @@ export default function LasCruces() {
         <p>
           Recurring cleaning starts at $160 a visit, a deep clean at $320 and a
           move-out at $350, for a home of roughly 1,400 to 1,600 square feet.
+          Those are floors rather than flat rates, and a bigger or harder house
+          quotes higher.
+        </p>
+        <p>
+          Offices and workplaces in the same area are quoted per visit after a
+          walkthrough, on a written scope.
         </p>
         <p className="text-sm">
           <Link href="/pricing/" className="font-semibold text-accent">

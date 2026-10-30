@@ -11,15 +11,15 @@ import { allTips } from "@/lib/tips";
  * Links must be markdown. Bare URLs fail the llms.txt checks.
  */
 const SERVICE_DETAIL: Record<string, string> = {
-  "house-cleaning": "Recurring and one-time cleaning for homes, from $160 a visit.",
-  "deep-cleaning": "Baseboards, inside appliances, grout and vents, from $320.",
-  "move-out-cleaning": "Empty houses cleaned for a landlord walkthrough or a buyer, from $350.",
-  "commercial-cleaning": "Offices and small commercial spaces, cleaned after hours, quoted per visit.",
+  "house-cleaning": "Recurring and one-time cleaning for homes, starting at $160 a visit.",
+  "deep-cleaning": "Baseboards, inside appliances, grout and vents, starting at $320.",
+  "move-out-cleaning": "Empty houses cleaned for a landlord walkthrough or a buyer, starting at $350.",
+  "commercial-cleaning": "Offices, clinics, studios, salons and small retail, cleaned after hours on a written scope, quoted per visit after a walkthrough.",
 };
 
 function priceLine() {
   const by = (s: string) => prices.find((p) => p.service.startsWith(s))?.from;
-  return `Recurring house cleaning starts at $${by("Recurring")} a visit, a one-time standard clean at $${by("One-time")}, a first-time deep clean at $${by("First-time")}, and a move-out clean at $${by("Move-out")}. Final prices depend on the size and condition of the house and are given before the work starts.`;
+  return `Recurring house cleaning starts at $${by("Recurring")} a visit, a one-time standard clean at $${by("One-time")}, a first-time deep clean at $${by("First-time")}, and a move-out clean at $${by("Move-out")}. Every one of those is a starting price rather than a flat rate: final prices depend on the size and condition of the house and are given before the work starts. Office and commercial cleaning carries no published starting price, because restroom count, floor surfaces and frequency move it too much to publish a useful floor. It is quoted per visit after a walkthrough.`;
 }
 
 export function GET() {
@@ -28,7 +28,7 @@ export function GET() {
   const body = [
     `# ${site.name}`,
     "",
-    "> A house cleaning company serving Las Cruces, New Mexico. Prices are published on the site rather than quoted only after a walkthrough, which is unusual in this market.",
+    "> A house and commercial cleaning company serving Las Cruces, New Mexico. Residential starting prices are published on the site rather than quoted only after a walkthrough, which is unusual in this market. Commercial work is quoted per visit against a written scope.",
     "",
     priceLine(),
     "",

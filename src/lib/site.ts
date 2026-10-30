@@ -36,8 +36,11 @@ export const social = [
 
 export type Price = {
   service: string;
+  /** A floor, never a flat rate. Every card renders it as "starting at". */
   from: number;
   unit: string;
+  /** What carries the quote above the floor, said in a few words. */
+  scales: string;
   detail: string;
 };
 
@@ -46,6 +49,7 @@ export const prices: Price[] = [
     service: "Recurring clean, every two weeks",
     from: 160,
     unit: "per visit",
+    scales: "Rises with size, bathrooms and interval",
     detail:
       "Kitchen, bathrooms, floors, dusting and surfaces throughout. Oven and refrigerator interiors are optional add-ons.",
   },
@@ -53,6 +57,7 @@ export const prices: Price[] = [
     service: "One-time standard clean",
     from: 180,
     unit: "one time",
+    scales: "Rises with size, bathrooms and condition",
     detail:
       "The same work as a recurring visit, booked once. It costs more per visit because there is no next visit keeping the home from drifting.",
   },
@@ -60,6 +65,7 @@ export const prices: Price[] = [
     service: "First-time deep clean",
     from: 320,
     unit: "one time",
+    scales: "Rises with size and how long it has been",
     detail:
       "Baseboards, grout, vents and the build-up a standard clean cannot reach. Oven and refrigerator interiors are included.",
   },
@@ -67,12 +73,19 @@ export const prices: Price[] = [
     service: "Move-out clean",
     from: 350,
     unit: "one time",
+    scales: "Rises with size, bathrooms and condition",
     detail:
       "An empty home cleaned to hand back to a landlord or a buyer. Inside cabinets, inside the oven and refrigerator, every fixture.",
   },
 ];
 
 export const services = [
+  {
+    slug: "commercial-cleaning",
+    title: "Commercial Cleaning",
+    blurb:
+      "Offices, clinics and workplaces in Las Cruces, cleaned after hours on a written scope.",
+  },
   {
     slug: "house-cleaning",
     title: "House Cleaning",
@@ -87,10 +100,5 @@ export const services = [
     slug: "move-out-cleaning",
     title: "Move-Out Cleaning",
     blurb: "Empty houses cleaned for the walkthrough.",
-  },
-  {
-    slug: "commercial-cleaning",
-    title: "Commercial Cleaning",
-    blurb: "Offices and small commercial spaces, after hours.",
   },
 ];

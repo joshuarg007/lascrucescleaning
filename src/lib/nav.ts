@@ -1,8 +1,8 @@
 export const serviceNav = [
+  { href: "/commercial-cleaning/", label: "Offices" },
   { href: "/house-cleaning/", label: "House Cleaning" },
   { href: "/deep-cleaning/", label: "Deep Cleaning" },
   { href: "/move-out-cleaning/", label: "Move-Out" },
-  { href: "/commercial-cleaning/", label: "Commercial" },
 ];
 
 export const mainNav = [

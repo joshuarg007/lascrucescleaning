@@ -307,7 +307,7 @@ export function PriceCards({
             </p>
             <p className="mt-4 flex items-baseline gap-1.5">
               <span className={`text-xs font-medium ${lead ? "text-white/60" : "text-muted"}`}>
-                from
+                starting at
               </span>
               <span
                 className={`font-display text-4xl font-semibold tracking-tight ${
@@ -317,7 +317,12 @@ export function PriceCards({
                 ${p.from}
               </span>
             </p>
-            <p className={`mt-1 text-xs ${lead ? "text-white/60" : "text-muted"}`}>{p.unit}</p>
+            <p className={`mt-1 text-xs ${lead ? "text-white/60" : "text-muted"}`}>
+              {p.unit}
+            </p>
+            <p className={`mt-0.5 text-xs ${lead ? "text-white/50" : "text-muted"}`}>
+              {p.scales}
+            </p>
             <p
               className={`mt-4 border-t pt-4 text-sm leading-relaxed ${
                 lead ? "border-white/20 text-white/75" : "border-line text-ink-2"
@@ -328,6 +333,35 @@ export function PriceCards({
           </div>
         );
       })}
+    </div>
+  );
+}
+
+/**
+ * Commercial work is the growth push, so it gets a band of its own wherever the
+ * residential prices appear. It carries no number on purpose: offices vary too
+ * much for a starting price to mean anything.
+ */
+export function CommercialCallout() {
+  return (
+    <div className="not-prose mt-5 flex flex-col gap-5 rounded-xl border border-accent/40 bg-accent-soft p-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-wider text-accent-deep">
+          Offices and workplaces
+        </p>
+        <p className="mt-2 max-w-2xl leading-relaxed text-ink-2">
+          Commercial cleaning is quoted per visit against a written scope, after a
+          walkthrough. Restroom count, floor surfaces, desk count and how often you
+          want us there move the number far more than square footage does, so there
+          is no useful starting price to publish.
+        </p>
+      </div>
+      <Link
+        href="/commercial-cleaning/"
+        className="shrink-0 rounded-lg bg-accent-deep px-6 py-3.5 text-center font-semibold text-white transition-transform hover:-translate-y-0.5"
+      >
+        Arrange a walkthrough
+      </Link>
     </div>
   );
 }

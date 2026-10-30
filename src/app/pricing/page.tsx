@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Hero, Section, CallToAction, PriceCards, Schema } from "@/components/ui";
+import { Hero, Section, CallToAction, PriceCards, CommercialCallout, Schema } from "@/components/ui";
 import { prices, site } from "@/lib/site";
 import { image } from "@/lib/images";
 
 export const metadata: Metadata = {
-  title: "House Cleaning Prices in Las Cruces",
+  title: "Cleaning Prices in Las Cruces: Homes and Offices",
   description:
-    "What house cleaning costs in Las Cruces. Recurring from $160 a visit, deep clean from $320, move-out from $350, with the things that move the price explained.",
+    "What cleaning costs in Las Cruces. Homes start at $160 a visit, deep cleans at $320, move-outs at $350, and offices are quoted per visit after a walkthrough.",
   alternates: { canonical: "/pricing/" },
   openGraph: { url: "/pricing/" },
 };
@@ -20,7 +20,15 @@ const faq = {
       name: "How much does house cleaning cost in Las Cruces?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Recurring cleaning starts at $160 a visit for a home of roughly 1,400 to 1,600 square feet with three bedrooms and two bathrooms. A one-time standard clean starts at $180, a first-time deep clean at $320, and a move-out clean at $350. Square footage, bathroom count and condition move your quote.",
+        text: "Recurring cleaning starts at $160 a visit for a home of roughly 1,400 to 1,600 square feet with three bedrooms and two bathrooms. A one-time standard clean starts at $180, a first-time deep clean at $320, and a move-out clean at $350. Those are starting prices rather than flat rates, and square footage, bathroom count and condition move your quote up from there.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does office cleaning cost in Las Cruces?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Commercial cleaning is quoted per visit against a written scope, after a walkthrough. Offices vary far more than homes do, so a published starting price would be misleading. Restroom count and condition, floor surfaces, desk count, whether there is a kitchen and how often you want service all move the number.",
       },
     },
     {
@@ -49,20 +57,23 @@ export default function Pricing() {
       <Hero
         eyebrow="Pricing"
         title="What cleaning costs in Las Cruces."
-        lede="Starting prices for every service we offer, and what moves them."
+        lede="Starting prices for every home service we offer, what moves them, and how commercial work is quoted."
         showPricesLink={false}
         image={image("pricing")}
       />
 
       <Section tone="surface">
         <p className="mb-6 max-w-2xl text-lg text-ink-2">
-          These starting prices assume a home of roughly 1,400 to 1,600 square
-          feet with three bedrooms and two bathrooms. Your quote may change with
-          the number of bathrooms, the home&apos;s condition, and any optional
-          work you request.
+          Every price here is a starting point, not a flat rate. Each assumes a
+          home of roughly 1,400 to 1,600 square feet with three bedrooms and two
+          bathrooms, and the quote moves up from there with the number of
+          bathrooms, the home&apos;s condition, and any optional work you request.
+          Nobody pays less than the starting number and nobody pays more without
+          hearing it first.
         </p>
         <div className="not-prose pt-2">
           <PriceCards prices={prices} highlight="Recurring clean, every two weeks" />
+          <CommercialCallout />
         </div>
       </Section>
 
@@ -113,10 +124,25 @@ export default function Pricing() {
 
       <Section tone="ground" title="Recurring costs less per visit">
         <p>
-          A one-time standard clean is $180 and a recurring visit is $160.
+          A one-time standard clean starts at $180 and a recurring visit at $160.
           That&apos;s not a loyalty discount. A home cleaned two weeks ago is
           genuinely less work than one cleaned whenever it was last done, so the
           recurring rate reflects a smaller job.
+        </p>
+      </Section>
+
+      <Section tone="sand" title="How commercial work is priced instead">
+        <p>
+          Offices and workplaces get a per-visit price against a written scope,
+          after a twenty-minute walkthrough. It is not that we are being coy with
+          the number. Two offices of the same floor area can differ by half the
+          labor on restroom count alone, so a published starting price would
+          mislead most of the businesses reading it.
+        </p>
+        <p>
+          What you get instead is a line-by-line scope with a frequency next to
+          each item, a per-visit price, and a schedule, all in writing before the
+          first service. No lock-in term.
         </p>
       </Section>
 
