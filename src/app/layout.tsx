@@ -212,6 +212,12 @@ export default function RootLayout({
           data-widget-key="wgt_t7RqWBxfDa0Ncksow-VOWg"
           strategy="lazyOnload"
         />
+        {/* Site2CRM Form Discovery (observe only: lists form fields, never values) */}
+        <Script
+          src="https://api.site2crm.io/api/capture.js"
+          data-site-key="sk_d545d20d5d54ea78d9725292b78046c8"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
