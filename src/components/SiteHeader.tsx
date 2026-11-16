@@ -60,6 +60,8 @@ export function SiteHeader() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/las-cruces-cleaning-logo.webp"
+            srcSet="/las-cruces-cleaning-logo-160.webp 160w, /las-cruces-cleaning-logo.webp 330w"
+            sizes="82px"
             alt={site.name}
             width={90}
             height={48}
